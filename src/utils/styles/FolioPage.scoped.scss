@@ -1,0 +1,73 @@
+@import './variables.scss';
+
+@keyframes moveArrowRight {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(20px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveArrowLeft {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-20px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0;
+
+    &-before, &-after {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-fourth;
+        font-size: 60px;
+        padding: 20px;
+        cursor: pointer;
+    }
+
+    &-before {
+        &:hover {
+            animation: moveArrowRight 500ms both ease-in-out;
+        }
+    }
+
+    &-after {
+        &:hover {
+            animation: moveArrowLeft 500ms both ease-in-out;
+        }
+    }
+
+    &-project {
+        display: flex;
+        overflow: hidden;
+        width: 800px;
+        padding: 20px 0;
+    }
+}
+

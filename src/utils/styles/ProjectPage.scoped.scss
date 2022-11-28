@@ -1,0 +1,75 @@
+@import './variables.scss';
+
+.project {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    &-desc {
+        width: 50%;
+        height: fit-content;
+        padding: 45px 70px 45px 45px;
+        position: sticky;
+        top: 50px;
+        box-sizing: border-box;
+
+        &-formation {
+            font-style: italic;
+            text-align: center;
+            color: $color-secondary;
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        &-div {
+            margin: 10px 0;
+            color: $color-fourth;
+
+            &-btn {
+                display: flex;
+                justify-content: space-around;
+                padding: 15px 0;
+            }
+
+            &-techno {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+
+                span {
+                    padding: 0 10px;
+                }
+            }
+
+            h3 {
+                padding: 15px 0;
+                color: $color-third;
+                font-size: 20px;
+            }
+
+            p {
+                padding: 0 10px;
+            }
+
+            ul {
+                margin: 0;
+            }
+        }
+    }
+    &-column {
+        position: sticky;
+        height: fit-content;
+        top: 50px;
+    }
+    &-illust {
+        width: 50%;
+        padding: 0 15px 0 70px;
+        box-sizing: border-box;
+
+        img{
+            width: 100%;
+        }
+    }
+}

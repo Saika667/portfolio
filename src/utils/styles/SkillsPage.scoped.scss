@@ -1,0 +1,157 @@
+@import './variables.scss';
+
+@for $i from 1 through 3 {
+    .container-studies div:nth-child(#{$i}){
+        animation-delay: $i * .4s;
+    }
+}
+
+@keyframes timelineStudy {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes timelineBar {
+    0% {
+        transform: translateX(-760px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes timelinePoint {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.container {
+    width: 1000px;
+    margin: auto;
+
+    &-studies {
+        display: flex;
+        justify-content: space-between;
+
+        &-study {
+            background-color: $color-secondary;
+            padding: 10px;
+            width: 260px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            color: $color-primary;
+            opacity: 0;
+            animation: timelineStudy 350ms linear forwards;
+
+            h4 {
+                font-size: 15px;
+                margin: 0;
+            }
+
+            p {
+                font-style: italic;
+                margin: 0;
+                font-size: 12px;
+            }
+
+            span {
+                font-weight: bold;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.timeline {
+    width: 760px;
+    margin: auto;
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    &-bar {
+        height: 5px;
+        width: 100%;
+        background-color: $color-secondary;
+        margin: 20px 0;
+        animation: timelineBar 1050ms linear forwards;
+    }
+
+    &-point {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background-color: $color-secondary;
+        position: absolute;
+        top: 17px;
+        opacity: 0;
+    }
+}
+
+.firth {
+    left: 0;
+    animation: timelinePoint 350ms linear forwards;
+}
+
+.second {
+    left: 380px;
+    animation: timelinePoint 750ms 400ms linear forwards;
+}
+
+.third {
+    right: 0;
+    animation: timelinePoint 1050ms 800ms linear forwards;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &-area {
+        padding: 15px;
+        width: 30%;
+
+        &-box {
+            border: 1px solid $color-secondary;
+
+            &-title {
+                display: flex;
+                justify-content: space-between;
+
+                h4 {
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-size: 25px;
+                    color: $color-secondary;
+                    margin: 0;
+                    padding: 10px;
+                }
+            }
+
+            &-content {
+                display: none;
+                &.isOpen {
+                    display: block;
+                    padding: 10px;
+                    min-height: 95px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+@import './variables.scss';
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    color: $color-secondary;
+    margin: 20px auto;
+
+    &-exp {
+        display: flex;
+        width: 310px;
+        cursor: pointer;
+        border: 2px solid $color-secondary;
+        padding: 10px;
+        border-radius: 7pc 0 7pc 0;
+
+        &-icon {
+            width: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 17px;
+            width: 230px;
+        }
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 680px;
+    position: relative;
+    overflow: hidden;
+
+    &-job {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0 0 0;
+        position: relative;
+        z-index: 3;
+
+        &-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            color: $color-secondary;
+            border: 3px solid $color-secondary;
+            border-radius: 50%;
+            height: 100px;
+            font-size: 35px;
+            background-color: $color-primary;
+        }
+
+        &-desc {
+            background-color: $color-secondary;
+            color: $color-primary;
+            padding: 20px;
+            border-radius: 35px;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &-contract {
+                font-weight: bold;
+            }
+
+            &-date {
+                font-style: italic;
+            }
+
+            h2 {
+                font-size: 18px;
+                padding: 0 0 8px 0;
+            }
+
+            p {
+                
+            }
+        }
+    }
+
+    &-bar {
+        position: absolute;
+        background-color: $color-secondary;
+        width: 5px;
+        height: 100%;
+        left: 50px;
+        top: 20px;
+        z-index: 2;
+    }
+}
