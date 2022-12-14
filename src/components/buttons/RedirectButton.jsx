@@ -1,20 +1,21 @@
 import styled from 'styled-components'
-import colors from './../../utils/styles/colors'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Button = styled.a`
     text-decoration: none;
-    background-color: white;
+    background-color: ${props => props.theme.secondary};
     padding: 10px 20px;
     border-radius: 4px;
     display: flex;
     width: fit-content;
     font-weight: bold;
-    color: black;
+    color: ${props => props.theme.primary};
+    transition: all 300ms;
 
     &:hover {
-        background-color: ${colors.third};
-        color: ${colors.fourth};
+        background-color: ${props => props.theme.fourth};
+        color: ${props => props.theme.primary};
+        transition: all 300ms;
     }
 `
 const Text = styled.p`

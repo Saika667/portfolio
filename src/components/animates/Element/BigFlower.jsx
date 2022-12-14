@@ -1,5 +1,4 @@
-import styled, { keyframes } from 'styled-components'
-import colors from '../../../utils/styles/colors'
+import styled from 'styled-components'
 import { darken } from 'polished'
 
 const BigFlowerElement = styled.div`
@@ -12,7 +11,7 @@ const BigFlowerCenter = styled.div`
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: ${colors.fourth};
+    background-color: ${props => props.theme.fourth};
     top: 25px;
     left: 23px;
     z-index: 1;
@@ -60,7 +59,7 @@ const BigFlowerPetal = styled.div`
     width: 25px;
     height: 30px;
     border-radius: 50%;
-    background-color: ${colors.secondary};
+    background-color: ${props => props.theme.secondary};
     position: relative;
 
    &:before {
@@ -71,7 +70,7 @@ const BigFlowerPetal = styled.div`
         width: 15px;
         height: 20px;
         border-radius: 50%;
-        background-color: ${darken(0.1, colors.secondary)};
+        background-color: ${props => darken(0.1, props.theme.secondary)};
 
    }
 `

@@ -1,14 +1,26 @@
-import { Title, WrapperContainer } from './../utils/styles/Atoms'
+import { WrapperContainer } from './../utils/styles/Atoms'
 import styled from 'styled-components'
 import BorderProfile from '../components/animates/BorderProfile'
-import colors from '../utils/styles/colors'
 import DownloadButton from '../components/buttons/DownloadButton'
+import Title from '../components/Title'
 
 export const AboutContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
-    padding: 30px;
     align-items: center;
+    margin-top: 30px;
+
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    @media only screen and (min-width: 769px) and (max-width: 992px) {
+        
+    }
+
+    @media only screen and (min-width: 993px) {
+        
+    }
 `
 
 export const ProfileImage = styled.img`
@@ -17,7 +29,7 @@ export const ProfileImage = styled.img`
 
 export const ParagContainer = styled.div`
     padding-left: 20px;
-    color: ${colors.fourth};
+    color: ${props => props.theme.fourth};
     max-width: 600px;
     box-sizing: border-box;
 `
@@ -26,32 +38,68 @@ const Parag = styled.p`
     padding: 0 0 30px 0;
 `
 
+const FormationContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    margin: 0 0 30px 0;
+`
+
+const Formation = styled.a`
+    text-decoration: none;
+    font-weight: bold;
+    color: ${props => props.theme.primary};
+    background-color: ${props => props.theme.fourth};
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        color: ${props => props.theme.fourth}; 
+        background-color: ${props => props.theme.third};
+        transition: all 0.3s;
+    }
+
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+    }
+`
 function HomePage() {
     return (
         <WrapperContainer>
-            <Title>Accueil</Title>
+            <Title label={'Accueil'} />
+
             <AboutContainer>
                 <BorderProfile />
                 <ParagContainer>
                     <Parag>
-                        Je m'appelle Céline et j'ai 28 ans. J'ai commencer ma carrière professionnelle en tant que 
+                        Je m'appelle Céline et j'ai 28 ans. J'ai commencé ma carrière professionnelle en tant que 
                         Technicienne de laboratoire puis Assistante QHSE en laboratoire Pharmaceutique et 
-                        Nutraceutique. Souhaitant changer de secteur d'activité j'ai décidé d'effectuer une 
-                        reconversion professionnelle en tant que Développeuse Web.
+                        Nutraceutique.
                     </Parag>
-
                     <Parag>
+                        Souhaitant changer de secteur d'activité j'ai décidé d'effectuer une reconversion 
+                        professionnelle en tant que Développeuse Web. <br/>
                         J'ai suivis la formation Développeur Web, de 6 mois, chez Openclassrooms qui s'est terminé en 
-                        Novembre 2022. Désireuse d'en apprendre toujours plus dans ce domaine, je souhaiterai 
-                        perfectionner mes nouvelles compétences, en réalisant une deuxième formation de 
-                        Developpeur d'application - JavaScript React chez Openclassrooms, cette fois-ci en 
-                        alternance.
+                        Novembre 2022.
+                    </Parag>
+                    <Parag>
+                        Désireuse d'en apprendre toujours plus dans ce domaine, je souhaiterai perfectionner mes 
+                        nouvelles compétences. J'ai donc développé ce portfolio dans le but d'appréhender le framework 
+                        React mais aussi de trouver une alternance pour une deuxième formation, de Développeur d'application 
+                        JavaScript React chez Openclassrooms. 
                     </Parag>
 
+                    <FormationContainer>
+                        <Formation target='_blank' href='https://openclassrooms.com/fr/paths/516-developpeur-dapplication-javascript-react'>
+                            Developpeur d'application - JavaScript React
+                        </Formation>
+                    </FormationContainer>
+                    
                     <Parag>
                         Je suis donc à la recherche d'une entreprise pour une alternance d'une durée de 24 mois
-                        (3/4 jours par semaine).
-                        Au plaisir de se rencontrer.
+                        (3/4 jours par semaine). <br/>
+                        Au plaisir de se rencontrer. <br/>
                         A bientot.
                     </Parag>
                     <DownloadButton />

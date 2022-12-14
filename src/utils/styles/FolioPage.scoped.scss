@@ -1,73 +1,55 @@
-@import './variables.scss';
-
-@keyframes moveArrowRight {
-    0% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(20px);
-    }
-    50% {
-        transform: translateX(0);
-    }
-    75% {
-        transform: translateX(20px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes moveArrowLeft {
-    0% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(-20px);
-    }
-    50% {
-        transform: translateX(0);
-    }
-    75% {
-        transform: translateX(-20px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
 .container {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     margin: 30px 0;
+    flex-wrap: wrap;
 
-    &-before, &-after {
+    &-filter {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        color: $color-fourth;
-        font-size: 60px;
-        padding: 20px;
-        cursor: pointer;
-    }
+        justify-content: space-evenly;
+        margin: 15px 0;
 
-    &-before {
-        &:hover {
-            animation: moveArrowRight 500ms both ease-in-out;
-        }
-    }
+        &-elt {
+            color: var(--color-primary);
+            background-color: var(--color-secondary);
+            border-radius: 50px;
+            padding: 15px 20px;
+            cursor: pointer;
 
-    &-after {
-        &:hover {
-            animation: moveArrowLeft 500ms both ease-in-out;
+            &.active {
+                background-color: var(--color-third);
+            }
+
+            span {
+                padding: 0 0 0 10px;
+            }
+
+            &:hover {
+                background-color: var(--color-third);
+            }
         }
     }
 
     &-project {
         display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
         overflow: hidden;
-        width: 800px;
         padding: 20px 0;
+        max-width: 1200px;
+        min-width: 90%;
+        margin: auto;
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .container {
+        &-filter {
+            flex-wrap: wrap;
+        }
+        
+        &-project {
+
+        }
+    }
+}

@@ -1,4 +1,4 @@
-import { Title, WrapperContainer } from './../utils/styles/Atoms'
+import { WrapperContainer } from './../utils/styles/Atoms'
 import RedirectButton from '../components/buttons/RedirectButton';
 import Column from '../components/animates/Column';
 import CornerFlower from '../components/animates/CornerFlower';
@@ -6,9 +6,9 @@ import {useParams} from 'react-router-dom';
 import { projectsTable } from '../data/tables.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowPointer } from '@fortawesome/free-solid-svg-icons'
-import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import './../utils/styles/ProjectPage.scoped.scss'
+import Title from '../components/Title'
 
 function ProjectPage() {
     const { projectId } = useParams();
@@ -20,7 +20,7 @@ function ProjectPage() {
     
     return (
         <WrapperContainer>
-            <Title>{project.name}</Title>
+            <Title label={project.name} />
 
             <article className='project'>
                 <div className='project-desc'>
@@ -41,8 +41,8 @@ function ProjectPage() {
                         <div className='project-desc-div-techno'>
                             {project.technologies.map((techno, index) => (
                                 <div key={index}>
-                                    <FontAwesomeIcon icon={faCheck} />
-                                    <span>{techno}</span>
+                                    <FontAwesomeIcon icon={techno.logo} />
+                                    <span>{techno.name}</span>
                                 </div>
                             ))}
                         </div>
@@ -85,7 +85,10 @@ function ProjectPage() {
                         <img src={project.cover} alt="project cover" />
                     ) : (
                         project.images.map((image, index) => (
-                            <img src={image} alt="maquette projet" key={index}/>
+                            <div className='project-illust-picture'>
+                                <p>{image.caption}</p>
+                                <img src={image.image} alt={image.caption} key={index}/>
+                            </div>
                         ))
                     )}
                 </div>

@@ -1,5 +1,4 @@
-import styled, { keyframes } from 'styled-components'
-import colors from '../../utils/styles/colors'
+import styled from 'styled-components'
 import profil from '../../assets/profil.jpg'
 import { Leaf } from './Column.jsx'
 import BigFlower from './Element/BigFlower'
@@ -13,6 +12,10 @@ const BorderProfileContainer = styled.div`
     position: relative;
     width: 400px;
     height: 400px;
+
+    @media only screen and (max-width: 768px) {
+        margin-bottom: 25px;
+    }
 `
 
 const ProfileImage = styled.img`

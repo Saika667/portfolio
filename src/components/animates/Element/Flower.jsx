@@ -1,5 +1,4 @@
-import styled, { keyframes } from 'styled-components'
-import colors from '../../../utils/styles/colors'
+import styled from 'styled-components'
 
 const FlowerComp = styled.div`
     width: 33px;
@@ -8,7 +7,7 @@ const FlowerComp = styled.div`
 
     &.flowerBlue {
         & .petal {
-            background-color: ${colors.third};
+            background-color: ${props => props.theme.third};
             border: none;
         }
     }
@@ -21,25 +20,25 @@ const FlowerComp = styled.div`
 
     &.flowerPinkBorder {
         & .petal {
-            border: 1px solid ${colors.fourth};
+            border: 1px solid ${props => props.theme.fourth};
         }
     }
     &.flowerBlueBorder {
         & .petal {         
-            border: 1px solid ${colors.fourth};
-            background-color: ${colors.third};
+            border: 1px solid ${props => props.theme.fourth};
+            background-color: ${props => props.theme.third};
         }
     }
 
     &.flowerWhitePink {
         & .petal {
-            background-color: ${colors.fourth};
+            background-color: ${props => props.theme.fourth};
         }
     }
 
     &.flowerWhiteBlue {
         & .petal {
-            background-color: ${colors.fourth};
+            background-color: ${props => props.theme.fourth};
         }
     }
 `
@@ -54,15 +53,15 @@ const FlowerCenter = styled.div`
     border-radius: 50%;
 
     &.centerWhite {
-        background-color: ${colors.fourth};
+        background-color: ${props => props.theme.fourth};
     }
 
     &.centerPink {
-        background-color: ${colors.secondary};
+        background-color: ${props => props.theme.secondary};
     }
 
     &.centerBlue {
-        background-color: ${colors.third};
+        background-color: ${props => props.theme.third};
     }
 `
 
@@ -70,7 +69,7 @@ const FlowerPetal =styled.div`
     position: absolute;
     width: 10px;
     height: 20px;
-    background-color: ${colors.secondary};
+    background-color: ${props => props.theme.secondary};
     border-radius: 50%;
 
     &.petalOne {

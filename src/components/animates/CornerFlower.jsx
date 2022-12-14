@@ -1,5 +1,4 @@
-import styled, { keyframes } from 'styled-components'
-import colors from '../../utils/styles/colors'
+import styled from 'styled-components'
 import { Leaf } from './Column.jsx'
 import LittleFlower from './Element/LittleFlower'
 
@@ -103,12 +102,12 @@ const Branch = styled.div`
     position: relative;
     width: 3px;
     height: 50px;
-    background-color: ${colors.secondary};
+    background-color: ${props => props.theme.secondary};
     z-index: 1;
 
     &:before, &:after {
         content: '';
-        background-color: ${colors.secondary};
+        background-color: ${props => props.theme.secondary};
         position: absolute;
         border-radius: 0 11px 11px 0;   
         width: 7px;
@@ -169,7 +168,7 @@ function CornerFlower({className}) {
                 </LittleFlowerContainer>
                 
                 <LittleFlowerContainer className='flowerFive'>
-                <   LittleFlower centerColor={'blue'}/>
+                    <LittleFlower centerColor={'blue'}/>
                 </LittleFlowerContainer>
                 
                 <LittleFlowerContainer className='flowerSix'>

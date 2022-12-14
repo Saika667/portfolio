@@ -1,6 +1,5 @@
 import { createRef, useEffect } from 'react'
 import styled from 'styled-components'
-import colors from '../utils/styles/colors'
 import { StyledLink } from './../utils/styles/Atoms'
 import { useState } from 'react'
 import DarkLightModeButton from './buttons/DarkLightModeButton'
@@ -8,7 +7,10 @@ import DarkLightModeButton from './buttons/DarkLightModeButton'
 const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  background-color: ${colors.secondary};
+  background-color: ${props => props.theme.secondary};
+  position: fixed;
+  width: 100%;
+  z-index: 8;
 `
 
 const Navigation = styled.nav`
@@ -40,8 +42,17 @@ const Selector = styled.div`
   background: linear-gradient(45deg, #9F496E 0%, #2B262D 100%);
 `
 
-function Header() {
-  const [navMenuActive, setNavMenuActive] = useState(0)
+function Header({ currentTheme, setTheme }) {
+  const pathIndex = {
+    '/': 0,
+    '/folio': 1,
+    '/skills': 2,
+    '/experiences': 3,
+    '/contact': 4
+  }
+  const path = window.location.pathname
+  const initialIndex = pathIndex.hasOwnProperty(path) ? pathIndex[path] : 0
+  const [navMenuActive, setNavMenuActive] = useState(initialIndex)
   let firstMenuRef = createRef()
   let secondMenuRef = createRef()
   let thirdMenuRef = createRef()
@@ -70,7 +81,7 @@ function Header() {
 
   return (
     <NavContainer>
-      <DarkLightModeButton />
+      <DarkLightModeButton currentTheme={currentTheme} setTheme={setTheme}/>
       <Navigation>
         <Selector ref={selectorRef}/>
         <LinkContainer className={`${navMenuActive === 0 ? 'active' : ''}`} ref={firstMenuRef}>

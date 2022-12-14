@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import colors from './../../utils/styles/colors'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
@@ -12,15 +11,19 @@ const ButtonContainer = styled.div`
 const ButtonLink = styled(Link)`
     text-decoration: none;
     padding: 15px 30px;
-    background-color: ${colors.fourth};
-    border-radius: 5px;
+    background-color: ${props => props.theme.fourth};
+    color: ${props => props.theme.primary};
+    border-radius: 10px;
     font-size: 20px;
     display: flex;
     width: 55px;
     justify-content: space-between;
+    transition: all 0.3s;
 
     :hover {
-        background-color: ${colors.third};
+        background-color: ${props => props.theme.third};
+        color: ${props => props.theme.fourth};
+        transition: all 0.3s;
     }
 `
 const Text = styled.p`

@@ -5,6 +5,8 @@ import ohmyfood from '../assets/ohmyfood.png'
 import kanap from '../assets/kanap.png'
 import piiquante from '../assets/piiquante.png'
 import groupomania from '../assets/groupomania.png'
+import { faNodeJs, faVuejs, faReact, faSass, faJsSquare, faHtml5, faCss3Alt } from '@fortawesome/free-brands-svg-icons'
+import { faDatabase } from '@fortawesome/free-solid-svg-icons'
 
 export const skillsTable = [
     {
@@ -76,7 +78,7 @@ export const experiencesTable = [
     },
     {
         id: 'exp11',
-        job: 'Assistance responsable Laboratoire de Contrôle Qualité',
+        job: 'Assistante Responsable Laboratoire de Contrôle Qualité',
         company: 'Phytéo Laboratoire',
         contract: 'Intérimaire',
         date: 'Décembre 2019',
@@ -168,22 +170,49 @@ export const projectsTable = [
     {
         id: 'pr1',
         name: 'Booki',
-        technologies: [ 'HTML', 'CSS'],
+        technologies: [
+            {
+                name: 'HTML',
+                logo: faHtml5
+            },
+            {
+                name: 'CSS',
+                logo: faCss3Alt
+            }
+        ],
         skills: ['Intégrer une maquette', 'Implémenter une interface responsive'],
         openclassroom: true,
         context: `Premier stage chez l'entreprise Booki. Un nouveau design vient d'être réalisé par le designer UI de l'entreprise.
         Avant de valider le nouveau design, Booki souhaite réaliser un prototype à l'aide de la maquette.`,
         specifications: ['Le site doit suivre les maquettes desktop et mobile, mais doit aussi être adapté aux formats tablette.',
         'Il est interdit d\'utiliser Grid, un framework CSS (type BootStrap ou Tailwind CSS), un processeur CSS (type Sass ou Less).',
-        'Le code doit être validé auX validateurs W3C HTML et CSS.'],
-        images: [desktop, telephone],
+        'Le code doit être validé aux validateurs W3C HTML et CSS.'],
+        images: [
+            {
+                image: desktop, 
+                caption: 'Maquette Desktop'
+            },
+            {
+                image: telephone,
+                caption:'Maquette téléphone'
+            }
+        ],
         cover: booki,
         code: 'https://github.com/Saika667/P2-Booki',
     },
     {
         id: 'pr2',
         name: 'Oh my food',
-        technologies: ['HTML', 'SCSS'],
+        technologies: [
+            {
+                name: 'HTML',
+                logo: faHtml5
+            },
+            {
+                name: 'SCSS',
+                logo: faSass
+            }
+        ],
         skills: ['Mettre en oeuvre des effets CSS graphiques avancés', 
         'Mettre en place un environnement Front-End',
         'Mettre en place une structure de navigation pour un site web',
@@ -202,7 +231,12 @@ export const projectsTable = [
     {
         id: 'pr3',
         name: 'Kanap',
-        technologies: ['JavaScript'],
+        technologies: [
+            {
+                name: 'JavaScript',
+                logo: faJsSquare
+            },
+        ],
         skills: ['Valider des données issues de sources externes', 
         'Interagir avec un web service avec JavaScript',
         'Gérer des événements JavaScript'],
@@ -221,7 +255,16 @@ export const projectsTable = [
     {
         id: 'pr4',
         name: 'Piiquante',
-        technologies: ['nodeJS', 'mongoDB'],
+        technologies: [
+            {
+                name: 'NodeJS',
+                logo: faNodeJs
+            },
+            {
+                name: 'MongoDB',
+                logo: faDatabase
+            }
+        ],
         skills: ['Mettre en oeuvre des opérations CRUD de manière sécurisée.',
         'Implémenter un modèle logique de données conformément à la réglementation.',
         'Stocker des donnnées de manière sécurisée'],
@@ -238,7 +281,28 @@ export const projectsTable = [
     {
         id: 'pr5',
         name: 'Groupomania',
-        technologies: [ 'HTML', 'SCSS', 'NodeJS', 'Framework VueJS', 'mongoDB'],
+        technologies: [
+            {
+                name: 'HTML',
+                logo: faHtml5
+            },
+            {
+                name: 'SCSS',
+                logo: faSass
+            },
+            {
+                name: 'NodeJS',
+                logo: faNodeJs
+            },
+            {
+                name: 'Framework VueJS',
+                logo: faVuejs
+            },
+            {
+                name: 'MongoDB',
+                logo: faDatabase
+            }
+        ],
         skills: ['Authentifier un utilisateur et maintenir sa session.', 
         'Implémenter un stockage de données sécurisé en utilisant une base de données.',
         'Développer l\'interface d\'un site web grâce à un framework front-end.'],
@@ -257,10 +321,23 @@ export const projectsTable = [
     {
         id: 'pr6',
         name: 'Portfolio',
-        technologies: [ 'HTML', 'SCSS', 'Framework React'],
+        technologies: [
+            {
+                name: 'HTML',
+                logo: faHtml5
+            },
+            {
+                name: 'SCSS',
+                logo: faSass
+            },
+            {
+                name: 'Framework React',
+                logo: faReact
+            }
+        ],
         skills: ['Appréhender le Framework React'],
         openclassroom: false,
-        context: '',
+        context: 'Ce portfolio a été réalisé dans le but de trouver une alternance pour la formation Developpeur d\'application - JavaScript React chez Openclassrooms.',
         specifications: ['Aucune'],
         images: [],
         cover: groupomania,

@@ -1,5 +1,4 @@
-import styled, { keyframes } from 'styled-components'
-import colors from '../../utils/styles/colors'
+import styled /*{ keyframes }*/ from 'styled-components'
 
 const DeskContainer = styled.div`
     position: relative;
@@ -380,7 +379,7 @@ const RayOfLightContainer = styled.div`
     right: 213px;
 `
 const RayOfLight = styled.div`
-    background-color: ${colors.third};
+    background-color: ${props => props.theme.third};
     opacity: 0.5;
     width: 142px;
     height: 381px;
@@ -390,7 +389,7 @@ const RayOfLight = styled.div`
     &:before, &:after {
         content: '';
         position: absolute;
-        background-color: ${colors.third};
+        background-color: ${props => props.theme.third};
         z-index: 2;
     }
     &:before {

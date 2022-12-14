@@ -1,20 +1,53 @@
-import { Title, WrapperContainer } from './../utils/styles/Atoms'
-import styled from 'styled-components'
-import colors from '../utils/styles/colors'
+import { WrapperContainer } from './../utils/styles/Atoms'
+import styled, { keyframes } from 'styled-components'
 import './../utils/styles/SkillsPage.scoped.scss'
 import ScrollingButton from '../components/buttons/ScrollingButton'
 import { skillsTable } from '../data/tables'
 import { useState } from 'react'
+import { Leaf } from './../components/animates/Column'
+import LittleFlower from './../components/animates/Element/LittleFlower'
+import Title from './../components/Title'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+
+const subTitleAppearance = keyframes`
+    0% {
+        transform: translateX(-350px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+`
+
+const SubTitleContainer = styled.div`
+    position: relative;
+    opacity: 0;
+
+    &.subtitle-one {
+        animation: ${subTitleAppearance} 500ms 150ms linear forwards;
+    }
+    &.subtitle-two {    
+        animation: ${subTitleAppearance} 500ms 2000ms linear forwards;
+    }
+`
 
 const SubTitle = styled.h3`
-    color: ${colors.fourth};
-    margin: 30px 0;
+    color: ${props => props.theme.fourth};
+    padding: 30px 0 30px 70px;
     font-size: 28px;
 `
 
-const Skill = styled.p`
-    margin: 0;
-    color: ${colors.fourth};
+const FlowerContainer = styled.div`
+    position: absolute;
+    top: 39px;
+    left: 34px;
+`
+
+const LeafComponent = styled(Leaf)`
+    top: 36px;
+    transform: rotate(45deg);
 `
 
 function SkillsPage() {
@@ -28,9 +61,16 @@ function SkillsPage() {
 
     return (
         <WrapperContainer>
-            <Title>Compétences et Diplômes</Title>
+            <Title label={'Compétences et Diplômes'}/>
 
-            <SubTitle>Parcours</SubTitle>
+            <SubTitleContainer className='subtitle-one'>
+                <FlowerContainer>
+                    <LittleFlower centerColor={'pink'}/>
+                </FlowerContainer>
+                <LeafComponent />
+                <SubTitle>Parcours</SubTitle>
+            </SubTitleContainer>
+
             <div className="container">
                 <div className='container-studies'>
                     <div className='container-studies-study'>
@@ -57,7 +97,14 @@ function SkillsPage() {
                 </div>
             </div>
 
-            <SubTitle>Compétences</SubTitle>
+            <SubTitleContainer className='subtitle-two'>
+                <FlowerContainer>
+                    <LittleFlower centerColor={'pink'}/>
+                </FlowerContainer>
+                <LeafComponent />
+                <SubTitle>Compétences</SubTitle>
+            </SubTitleContainer>
+            
             <div className='skills'>
                     {categories.map((cat) => (
                         <div className='skills-area' key={cat}>
@@ -73,7 +120,10 @@ function SkillsPage() {
                                 <div className={`skills-area-box-content ${openedCategories.includes(cat) ? 'isOpen' : ''}`}>
                                     {skillsTable.map(({skill, category}) => (
                                         cat === category ? (
-                                            <Skill key={skill}>{skill}</Skill> 
+                                            <div key={skill} className='skills-area-box-content-item'>
+                                                <FontAwesomeIcon icon={faCheck} />
+                                                <p>{skill}</p>
+                                            </div> 
                                         ) : null
                                     ))}
                                 </div>

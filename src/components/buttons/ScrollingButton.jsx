@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import colors from './../../utils/styles/colors'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import { faAnglesDown } from '@fortawesome/free-solid-svg-icons'
@@ -12,7 +11,7 @@ const ButtonContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 10px;
-    color: ${colors.fourth};
+    color: ${props => props.theme.fourth};
     font-size: 20px;
     cursor: pointer;
 `

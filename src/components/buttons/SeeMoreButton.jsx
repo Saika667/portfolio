@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import colors from './../../utils/styles/colors'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
@@ -9,7 +8,7 @@ const ButtonContainer = styled.div`
 `
 const Button = styled.div`
   padding: 10px 20px;
-  background-color: ${colors.third};
+  background-color: ${props => props.theme.primary};
   border-radius: 10px;
   text-align: center;
   font-size: 20px;
@@ -17,15 +16,16 @@ const Button = styled.div`
   cursor: pointer;
 
   & a {
-    color: ${colors.fourth};
+    color: ${props => props.theme.fourth};
     display: flex;
     justify-content: center;
   }
   
   &:hover {
-      background-color: ${colors.fourth};
+      background-color: ${props => props.theme.fourth};
+
       & a {
-        color: ${colors.primary};
+        color: ${props => props.theme.primary};
       } 
   }
 `

@@ -1,39 +1,29 @@
 import SeeMore from './buttons/SeeMoreButton'
-import styled /*, { keyframes }*/ from 'styled-components'
-import colors from '../utils/styles/colors'
-
-/*
-const moveArtRight = keyframes`
-    from {
-
-    }
-    to {
-
-    }
-`*/
+import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const ProjectArt = styled.article`
-    width: 600px;
+    width: 45%;
     position: relative;
-    margin: auto;
+    margin: 0 0 25px 0;
 
     &:before, &:after {
         content: '';
         position: absolute;
-        height: 460px;
-        width: 600px;
+        height: 400px;
+        width: 100%;
         z-index: 1; 
         transition: 300ms ease;      
     }
 
     &:before {
-        background-color: ${colors.secondary};
+        background-color: ${props => props.theme.secondary};
         top: 0;
         right: 0;
     }
 
     &:after {
-        background-color: ${colors.third};
+        background-color: ${props => props.theme.third};
         top: 0;
         right: 0;
     }
@@ -54,9 +44,22 @@ const ProjectArt = styled.article`
             right: -15px;
         }
     }
+    
+    &.hidden {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+
+        &:before, &:after {
+            height: 250px; 
+        }
+    }
 `
 const ImageContainer = styled.div`
-    height: 460px;
+    height: 400px;
     position: relative;
     z-index: 2;
 
@@ -65,11 +68,15 @@ const ImageContainer = styled.div`
         height: 100%;
         object-fit: cover;
     }
+
+    @media only screen and (max-width: 768px) {
+        height: 250px;
+    }
 `
 
 const ProjectTitle = styled.h3`
-    background-color: ${colors.primary};
-    color: ${colors.fourth};
+    background-color: ${props => props.theme.primary};
+    color: ${props => props.theme.fourth};
     min-width: 150px;
     text-align: center;
     padding: 10px;
@@ -81,7 +88,7 @@ const ProjectTitle = styled.h3`
 
 const ProjectDesc = styled.div`
     display: none;
-    color: ${colors.fourth};
+    color: ${props => props.theme.primary};
     position: absolute;
     top: 0;
     bottom: 0;
@@ -90,10 +97,28 @@ const ProjectDesc = styled.div`
     padding: 35px;
     background-color: rgba(55, 9, 74, 0.8);
     z-index: 2;
+
+    & .techno {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 10px 0 0 0;
+
+        span {
+            padding: 0 0 0 10px;
+        }
+
+        div {
+            margin: 0 0 10px 0;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        position: relative;
+    }
 `
 
 function Project({image, title, technologies, skills, index, projectId}) {
-    console.log(projectId);
     return (
         <ProjectArt key={index}>
             <ImageContainer>
@@ -102,11 +127,14 @@ function Project({image, title, technologies, skills, index, projectId}) {
             <ProjectTitle>{title}</ProjectTitle>
             <ProjectDesc className='description'>
                 <p>Technologies :</p>
-                <ul>
+                <div className='techno'>
                     {technologies.map((techno, index) => (
-                        <li key={index}>{techno}</li>
+                        <div key={index}>
+                            <FontAwesomeIcon icon={techno.logo} />
+                            <span>{techno.name}</span>
+                        </div>
                     ))}
-                </ul> 
+                </div> 
                 <p>Compétences évaluées :</p>
                 <ul>
                     {skills.map((skill, index) => (

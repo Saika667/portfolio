@@ -1,5 +1,4 @@
-import styled, { keyframes } from 'styled-components'
-import colors from '../../utils/styles/colors'
+import styled from 'styled-components'
 import Flower from './Element/Flower';
 import BigFlower from './Element/BigFlower';
 
@@ -19,7 +18,7 @@ const ColumnContainer = styled.div`
     position: relative;
     display: flex;
     width: 110px;
-    height: 750px;
+    height: 680px;
 `
 /*-----------------------------FIN Colonne globale--------------------------------*/
 
@@ -86,8 +85,8 @@ const ColumnBody = styled.div`
 `
 const ColumnContent = styled.div`
     width: 20px;
-    height: 606px;
-    ${getTopOffset(36, 17)}
+    height: 586px;
+    ${getTopOffset(32, 17)}
     position: absolute;
     right: 45px;
     top: 104px;
@@ -102,10 +101,10 @@ const Content = styled.div`
     transform: rotate(124deg);
 
     &:nth-child(odd) {
-        background-color: ${colors.secondary};
+        background-color: ${props => props.theme.secondary};
     }
     &:nth-child(even) {
-        background-color: ${colors.third};
+        background-color: ${props => props.theme.third};
     }
 `
 /*-----------------------------Colonne corps (feuille)--------------------------------*/
@@ -115,7 +114,7 @@ const LeafContainer = styled.div`
     flex-direction: column;
     justify-content: space-around;
     position: absolute;
-    ${getTopOffset(13, 42)}
+    ${getTopOffset(12, 42)}
 
     &.left {
         left: 5px;
@@ -131,12 +130,12 @@ export const Leaf = styled.div`
     border-radius: 7pc 0 7pc 0;
     width: 40px;
     height: 20px;
-    border: 1px solid ${colors.fourth};
+    border: 1px solid ${props => props.theme.fourth};
     position: absolute;
 
     &:before {
         content: '';
-        background-color: ${colors.fourth};
+        background-color: ${props => props.theme.fourth};
         width: 20px;
         border-radius: 50%;
         height: 3px;
@@ -197,7 +196,7 @@ const FootColumnContainer = styled.div `
     z-index: 2;
 `
 const FootColumn = styled.div `
-    background-color: ${colors.secondary};
+    background-color: ${props => props.theme.secondary};
     width: 80px;
     height: 25px;
     position: relative;
@@ -205,7 +204,7 @@ const FootColumn = styled.div `
   
 `
 const Foot = styled.div `
-    background-color: ${colors.secondary};
+    background-color: ${props => props.theme.secondary};
     width: 40px;
     height: 20px;
     position: absolute;
@@ -256,21 +255,21 @@ function Column() {
             <ColumnBody>
                 <LeafContainer className='left'>
                     {
-                        [...Array(13)].map((e, i) =>
+                        [...Array(12)].map((e, i) =>
                             <Leaf key={i} className="leftLeaf"/>
                         )
                     }
                 </LeafContainer>
                 <ColumnContent>
                     {
-                        [...Array(36)].map((e, i) => 
+                        [...Array(32)].map((e, i) => 
                             <Content key={i} />
                         )
                     }
                 </ColumnContent>
                 <LeafContainer className='right'>
                     {
-                        [...Array(13)].map((e, i) =>
+                        [...Array(12)].map((e, i) =>
                             <Leaf key={i} className="rightLeaf"/>
                         )
                     }

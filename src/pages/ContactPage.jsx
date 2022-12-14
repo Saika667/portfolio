@@ -1,11 +1,12 @@
-import { Title, WrapperContainer } from './../utils/styles/Atoms'
+import { WrapperContainer } from './../utils/styles/Atoms'
+import Title from '../components/Title';
 import LabAnime from '../components/animates/LabAnime'
 import Desk from '../components/animates/Desk';
 
 function ContactPage() {
     return (
         <WrapperContainer>
-            <Title>Contact</Title>
+            <Title label={'Contact'} />
             <Desk />
             <LabAnime />
         </WrapperContainer>

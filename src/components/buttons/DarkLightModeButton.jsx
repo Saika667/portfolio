@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMoon } from '@fortawesome/free-solid-svg-icons'
-import colors from './../../utils/styles/colors'
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 
 const ButtonContainer = styled.div`
     display: flex;
@@ -9,17 +8,21 @@ const ButtonContainer = styled.div`
     align-items: center;
     padding: 0 30px;
     font-size: 34px;
-    color: ${colors.primary};
+    color: ${props => props.theme.primary};
 
     &:hover {
-        color: ${colors.fourth};
+        color: ${props => props.theme.fourth};
     }
 `
 
-function DarkLightModeButton() {
+function DarkLightModeButton({ currentTheme, setTheme }) {
     return (
-      <ButtonContainer>
-          <FontAwesomeIcon icon={faMoon} />
+      <ButtonContainer onClick={() => currentTheme === 'dark' ? setTheme('light') : setTheme('dark')}>
+            {currentTheme === 'light' ? 
+                <FontAwesomeIcon icon={faMoon} /> 
+                :
+                <FontAwesomeIcon icon={faSun} />
+            }
       </ButtonContainer>
     )
   }

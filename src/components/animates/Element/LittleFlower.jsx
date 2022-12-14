@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import colors from '../../../utils/styles/colors'
 
 export const LittleFlowerContainer = styled.div`
     position: absolute;
@@ -17,7 +16,7 @@ const LittleFlowerPetal = styled.div`
     border-radius: 50%;
     width: 10px;
     height: 10px;
-    background-color: ${colors.fourth};
+    background-color: ${props => props.theme.fourth};
 
     &.petalOne {
         top: 0;
@@ -55,11 +54,11 @@ const LittleFlowerCenter = styled.div`
     z-index: 1;
 
     &.pink {
-        background-color: ${colors.secondary};
+        background-color: ${props => props.theme.secondary};
     }
 
     &.blue {
-        background-color: ${colors.third};
+        background-color: ${props => props.theme.third};
     }
 `
 
