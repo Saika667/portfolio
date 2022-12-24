@@ -2,6 +2,7 @@
   "name": "porte-folio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://saika667.github.io/portfolio",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
@@ -23,9 +24,11 @@
   "scripts": {
     "start": "craco start",
     "startOld": "react-scripts start",
-    "build": "react-scripts build && DEL /S /Q docs && move build docs",
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "cracoConfig": "craco.config.js",
   "eslintConfig": {
@@ -47,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "sass": "^1.55.0"
   }
 }
