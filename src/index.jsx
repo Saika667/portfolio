@@ -21,12 +21,13 @@ root.render(
         <GlobalStyle />
 
         <Routes>
-          <Route path="/" element={ <HomePage /> } />
+          <Route path="/home" element={ <HomePage /> } />
           <Route path="/folio" element={ <FolioPage /> } />
           <Route path="/folio/:projectId" element={ <ProjectPage /> } />
           <Route path="/skills" element={ <SkillsPage /> } />
           <Route path="/experiences" element={ <ExperiencesPage /> } />
           <Route path="/animation" element={ <AnimationPage /> } />
+          <Route path="*" element={ <HomePage /> } />
         </Routes>
       </App>
     </Router>
