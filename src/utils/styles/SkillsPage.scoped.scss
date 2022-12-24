@@ -187,11 +187,13 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+//même fonctionnement tablette et téléphone
+@media only screen and (max-width: 992px) {
     .container {
         display: flex;
         flex-direction: row-reverse;
         width: auto;
+        max-width: 350px;
 
         &-studies {
             flex-direction: column;
@@ -228,7 +230,9 @@
             animation-delay: 2.3 + $i * .4s;
         }
     }
+}
 
+@media only screen and (max-width: 768px) {
     .skills {
         flex-direction: column;
 

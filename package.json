@@ -23,7 +23,7 @@
   "scripts": {
     "start": "craco start",
     "startOld": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && DEL /S /Q docs && move build docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

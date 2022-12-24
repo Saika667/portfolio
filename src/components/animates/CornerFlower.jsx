@@ -17,6 +17,10 @@ const CornerFlowerContainer = styled.div`
         left: 0;
         transform: rotateX(180deg);
     }
+
+    @media only screen and (max-width: 768px) {
+        opacity: 0.2;
+    }
 `
 
 const CornerFlowerContent = styled.div`

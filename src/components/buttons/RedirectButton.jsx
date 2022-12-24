@@ -24,7 +24,7 @@ const Text = styled.p`
 
 function RedirectButton({url, icon, label}) {
     return (
-        <Button href={url}>
+        <Button href={url} target="_blank">
             <FontAwesomeIcon icon={icon} />
             <Text>{label}</Text>
         </Button>

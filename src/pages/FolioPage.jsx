@@ -2,16 +2,12 @@ import { WrapperContainer } from './../utils/styles/Atoms'
 import './../utils/styles/FolioPage.scoped.scss'
 import Project from '../components/Project';
 import { projectsTable } from '../data/tables.js'
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import Title from '../components/Title';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { GlobalContext } from '../utils/context/global';
 
 function FolioPage() {
     const [filters, setFilters] = useState([])
-
-    const globalContext = useContext(GlobalContext)
-    console.log(globalContext)
     
     function toggleFilter(filterName) {
         let copy = [...filters]

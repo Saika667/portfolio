@@ -1,29 +1,39 @@
 import { WrapperContainer } from './../utils/styles/Atoms'
-import RedirectButton from '../components/buttons/RedirectButton';
-import Column from '../components/animates/Column';
-import CornerFlower from '../components/animates/CornerFlower';
-import {useParams} from 'react-router-dom';
+import RedirectButton from '../components/buttons/RedirectButton'
+import Column from '../components/animates/Column'
+import CornerFlower from '../components/animates/CornerFlower'
+import {useParams} from 'react-router-dom'
 import { projectsTable } from '../data/tables.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowPointer } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import './../utils/styles/ProjectPage.scoped.scss'
 import Title from '../components/Title'
+import { useEffect, useState, useContext, createRef } from 'react'
+import { GlobalContext } from '../utils/context/global'
 
 function ProjectPage() {
     const { projectId } = useParams();
-    console.log(projectId);
+
+    const projectDescRef = createRef()
+    const [descHeight, setDescHeight] = useState(800)
+    
     //filter renvoie un tableau d'élément trouvé
     //TODO: si project = tableau vide alors erreur 404
     const project = projectsTable.filter(project => project.id === projectId)[0];
-    console.log(project);
+
+    useEffect(() => {
+        setDescHeight(projectDescRef.current.offsetHeight);
+    }, [projectDescRef])
     
+    const { device } = useContext(GlobalContext)
+
     return (
         <WrapperContainer>
             <Title label={project.name} />
 
             <article className='project'>
-                <div className='project-desc'>
+                <div className='project-desc' ref={projectDescRef}>
                     <CornerFlower className={'top'}/>
                     {project.openclassroom === true ? (
                         <p className='project-desc-formation'>
@@ -70,22 +80,26 @@ function ProjectPage() {
                         <h3>Code source et accès projet</h3>
                         <div className='project-desc-div-btn'>
                         <RedirectButton url={project.code} icon={faGithub} label={"Code"}/>
-                        <RedirectButton url={project.code} icon={faArrowPointer} label={"Projet"}/>
+                        <RedirectButton url={project.site} icon={faArrowPointer} label={"Projet"}/>
                         </div>
                     </div>
                     <CornerFlower className={'bottom'}/>
                 </div>
 
-                <div className='project-column'>
-                    <Column />
-                </div>
+                { device === 'desktop' || device === 'tablet' ? (
+                    <div className='project-column'>
+                        <Column targetHeight={descHeight} />
+                    </div>
+                    ) : null
+                }
+                
 
                 <div className='project-illust'>
                     {project.images.length === 0 ? (
                         <img src={project.cover} alt="project cover" />
                     ) : (
                         project.images.map((image, index) => (
-                            <div className='project-illust-picture'>
+                            <div className='project-illust-picture' key={index}>
                                 <p>{image.caption}</p>
                                 <img src={image.image} alt={image.caption} key={index}/>
                             </div>

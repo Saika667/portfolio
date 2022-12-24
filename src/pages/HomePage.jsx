@@ -15,7 +15,7 @@ export const AboutContainer = styled.div`
     }
 
     @media only screen and (min-width: 769px) and (max-width: 992px) {
-        
+        flex-direction: column;
     }
 
     @media only screen and (min-width: 993px) {

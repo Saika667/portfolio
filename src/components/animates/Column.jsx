@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import Flower from './Element/Flower';
 import BigFlower from './Element/BigFlower';
+import { useContext } from 'react';
+import { GlobalContext } from '../../utils/context/global';
 
 function getTopOffset(contentNumber, space) {
     let style = '';
@@ -14,11 +16,13 @@ function getTopOffset(contentNumber, space) {
     return style;
 }
 /*-----------------------------Colonne globale --------------------------------*/
-const ColumnContainer = styled.div`
+const ColumnContainer = styled.div.attrs(props => ({
+    columnHeight : props.columnHeight
+}))`
     position: relative;
     display: flex;
     width: 110px;
-    height: 680px;
+    height: ${props => props.columnHeight}px;
 `
 /*-----------------------------FIN Colonne globale--------------------------------*/
 
@@ -83,10 +87,12 @@ const FlowerContainer = styled.div`
 const ColumnBody = styled.div`
 
 `
-const ColumnContent = styled.div`
+const ColumnContent = styled.div.attrs(props => ({
+    number: props.number
+}))`
     width: 20px;
     height: 586px;
-    ${getTopOffset(32, 17)}
+    ${props => getTopOffset(props.number, 17)}
     position: absolute;
     right: 45px;
     top: 104px;
@@ -108,13 +114,15 @@ const Content = styled.div`
     }
 `
 /*-----------------------------Colonne corps (feuille)--------------------------------*/
-const LeafContainer = styled.div`
+const LeafContainer = styled.div.attrs(props => ({
+    number: props.number
+}))`
     width: 35px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     position: absolute;
-    ${getTopOffset(12, 42)}
+    ${props => getTopOffset(props.number, 42)}
 
     &.left {
         left: 5px;
@@ -211,10 +219,30 @@ const Foot = styled.div `
     bottom: 24px;
     border-radius: 16px 16px 0 0;
 `
+function getColumnValues(targetHeight) {
+    const columnTop = 122;
+    const columnBot = 44;
+    const remainingSpace = targetHeight - columnTop - columnBot;
+    const pxPerLeaf = 12 / 520;
+    const pxPerElement = 32 / 520;
+    const numberOfLeafs = Math.floor(pxPerLeaf * remainingSpace);
+    const numberOfElements = Math.floor(pxPerElement * remainingSpace) + 1;
+    return [numberOfLeafs, numberOfElements];
+}
+
 /*-----------------------------FIN Colonne pied--------------------------------*/
-function Column() {
+function Column({ targetHeight }) {
+    const { windowSize } = useContext(GlobalContext)
+    if (windowSize.innerHeight < 800) {
+        targetHeight = windowSize.innerHeight - 70
+    }
+    let [numberOfLeafs, numberOfElements] = getColumnValues(targetHeight);
+    if (windowSize.innerHeight > 800) {
+        numberOfLeafs = numberOfLeafs + 1
+    }
+
     return (
-        <ColumnContainer>
+        <ColumnContainer columnHeight={targetHeight}>
             <HeadColumnContainer>
                 <HeadColumn />
                 <FlowerContainer className='flowerPinkBorderPos'>
@@ -253,23 +281,23 @@ function Column() {
             </HeadColumnContainer>
 
             <ColumnBody>
-                <LeafContainer className='left'>
+                <LeafContainer className='left' number={numberOfLeafs}>
                     {
-                        [...Array(12)].map((e, i) =>
+                        [...Array(numberOfLeafs)].map((e, i) =>
                             <Leaf key={i} className="leftLeaf"/>
                         )
                     }
                 </LeafContainer>
-                <ColumnContent>
+                <ColumnContent number={numberOfElements}>
                     {
-                        [...Array(32)].map((e, i) => 
+                        [...Array(numberOfElements)].map((e, i) => 
                             <Content key={i} />
                         )
                     }
                 </ColumnContent>
-                <LeafContainer className='right'>
+                <LeafContainer className='right' number={numberOfLeafs}>
                     {
-                        [...Array(12)].map((e, i) =>
+                        [...Array(numberOfLeafs)].map((e, i) =>
                             <Leaf key={i} className="rightLeaf"/>
                         )
                     }

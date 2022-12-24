@@ -1,6 +1,9 @@
 import SeeMore from './buttons/SeeMoreButton'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import ArrowButton from './buttons/ArrowButton'
+import { useContext, useState } from 'react';
+import { GlobalContext } from '../utils/context/global'
 
 const ProjectArt = styled.article`
     width: 45%;
@@ -29,19 +32,21 @@ const ProjectArt = styled.article`
     }
 
     &:hover {
-        .description {
-            display: flex;
-            flex-direction: column;
-        }
+        @media only screen and (min-width: 993px) {
+            .description {
+                display: flex;
+                flex-direction: column;
+            }
 
-        &:before {
-            top: -15px;
-            right: 15px;
-        }
+            &:before {
+                top: -15px;
+                right: 15px;
+            }
 
-        &:after {
-            top: 15px;
-            right: -15px;
+            &:after {
+                top: 15px;
+                right: -15px;
+            }
         }
     }
     
@@ -54,7 +59,13 @@ const ProjectArt = styled.article`
         width: 100%;
 
         &:before, &:after {
-            height: 250px; 
+           display: none;
+        }
+    }
+
+    @media only screen and (min-width: 769px) and (max-width: 992px) {
+        &:before, &:after {
+           display: none;
         }
     }
 `
@@ -71,6 +82,11 @@ const ImageContainer = styled.div`
 
     @media only screen and (max-width: 768px) {
         height: 250px;
+        max-width: 350px;
+    }
+
+    @media only screen and (min-width: 769px) and (max-width: 992px) {
+        height: 250px;
     }
 `
 
@@ -84,11 +100,21 @@ const ProjectTitle = styled.h3`
     bottom: 0;
     right: 0;
     z-index: 3;
+
+    @media only screen and (max-width: 768px) {
+       top: 210px;
+       height: 20px;
+    }
+
+    @media only screen and (min-width: 769px) and (max-width: 992px) {
+        top: 210px;
+        height: 20px;
+    }
 `
 
 const ProjectDesc = styled.div`
     display: none;
-    color: ${props => props.theme.primary};
+    color: #F2EBE5;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -112,20 +138,38 @@ const ProjectDesc = styled.div`
             margin: 0 0 10px 0;
         }
     }
-
-    @media only screen and (max-width: 768px) {
+    //même fonctionnement tablet et téléphone
+    @media only screen and (max-width: 992px) {
+        display: flex;
         position: relative;
+        flex-direction: column;
+        padding: 0;
+        height: 0;
+        transition: all 300ms;
+        overflow: hidden;
+
+        &.open {
+            height: fit-content;
+            padding: 20px;
+        }
     }
 `
 
 function Project({image, title, technologies, skills, index, projectId}) {
+    const [isOpenDesc, setOpenDesc] = useState(false)
+    const { device } = useContext(GlobalContext)
+    
     return (
         <ProjectArt key={index}>
             <ImageContainer>
                 <img src={image} alt="logo projet"/>
             </ImageContainer>
             <ProjectTitle>{title}</ProjectTitle>
-            <ProjectDesc className='description'>
+
+            {device === 'mobile' && <ArrowButton isOpenDesc={isOpenDesc} setOpenDesc={setOpenDesc}/>}
+            {device === 'tablet' && <ArrowButton isOpenDesc={isOpenDesc} setOpenDesc={setOpenDesc}/>}
+
+            <ProjectDesc className={`description ${isOpenDesc ? 'open' : ''}`}>
                 <p>Technologies :</p>
                 <div className='techno'>
                     {technologies.map((techno, index) => (

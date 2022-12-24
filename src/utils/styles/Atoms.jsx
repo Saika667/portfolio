@@ -31,4 +31,7 @@ export const StyledLink = styled(Link)`
     color: ${props => props.theme.primary};
     text-transform: uppercase;
     transition-duration: 0.6s;
+    @media only screen and (max-width: 768px) {
+        color: ${props => props.theme.secondary};
+    }
 `

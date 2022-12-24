@@ -6,7 +6,7 @@ import HomePage from './pages/HomePage';
 import FolioPage from './pages/FolioPage';
 import SkillsPage from './pages/SkillsPage';
 import ExperiencesPage from './pages/ExperiencesPage';
-import ContactPage from './pages/ContactPage';
+import AnimationPage from './pages/AnimationPage';
 import ProjectPage from './pages/ProjectPage';
 import GlobalStyle from './utils/styles/GlobalStyle';
 import App from './components/App';
@@ -26,7 +26,7 @@ root.render(
           <Route path="/folio/:projectId" element={ <ProjectPage /> } />
           <Route path="/skills" element={ <SkillsPage /> } />
           <Route path="/experiences" element={ <ExperiencesPage /> } />
-          <Route path="/contact" element={ <ContactPage /> } />
+          <Route path="/animation" element={ <AnimationPage /> } />
         </Routes>
       </App>
     </Router>

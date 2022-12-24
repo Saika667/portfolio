@@ -199,6 +199,7 @@ export const projectsTable = [
         ],
         cover: booki,
         code: 'https://github.com/Saika667/P2-Booki',
+        site: 'https://saika667.github.io/P2-Booki/'
     },
     {
         id: 'pr2',
@@ -227,6 +228,7 @@ export const projectsTable = [
         images: [],
         cover: ohmyfood,
         code: 'https://github.com/Saika667/P3_oh_my_food',
+        site: 'https://saika667.github.io/P3_oh_my_food/'
     },
     {
         id: 'pr3',
@@ -251,6 +253,7 @@ export const projectsTable = [
         images: [],
         cover: kanap,
         code: 'https://github.com/Saika667/P5_Kanap',
+        site: 'https://saika667.github.io/kanap-frontend/html/index.html'
     },
     {
         id: 'pr4',
@@ -277,6 +280,7 @@ export const projectsTable = [
         images: [],
         cover: piiquante,
         code: 'https://github.com/Saika667/P6_Piiquante',
+        site: 'https://saika667.github.io/piiquante-frontend/login'
     },
     {
         id: 'pr5',
@@ -317,6 +321,7 @@ export const projectsTable = [
         images: [],
         cover: groupomania,
         code: 'https://github.com/Saika667/P7_Groupomania_vue',
+        site: 'https://groupomania-frontend.vercel.app/'
     },
     {
         id: 'pr6',
@@ -341,6 +346,7 @@ export const projectsTable = [
         specifications: ['Aucune'],
         images: [],
         cover: groupomania,
-        code: '',
+        code: 'https://github.com/Saika667/portfolio',
+        site: ''
     },
 ]
