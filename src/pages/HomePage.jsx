@@ -8,7 +8,7 @@ export const AboutContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 23px;
 
     @media only screen and (max-width: 768px) {
         flex-direction: column;
@@ -28,20 +28,20 @@ export const ProfileImage = styled.img`
 `
 
 export const ParagContainer = styled.div`
-    padding-left: 20px;
+    padding-left: 15px;
     color: ${props => props.theme.fourth};
-    max-width: 600px;
+    max-width: 450px;
     box-sizing: border-box;
 `
 
 const Parag = styled.p`
-    padding: 0 0 30px 0;
+    padding: 0 0 23px 0;
 `
 
 const FormationContainer = styled.div`
     display: flex;
     justify-content: center;
-    margin: 0 0 30px 0;
+    margin: 0 0 23px 0;
 `
 
 const Formation = styled.a`
@@ -49,8 +49,8 @@ const Formation = styled.a`
     font-weight: bold;
     color: ${props => props.theme.primary};
     background-color: ${props => props.theme.fourth};
-    padding: 15px 30px;
-    border-radius: 10px;
+    padding: 11px 23px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s;
 

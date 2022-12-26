@@ -14,7 +14,7 @@ const NavContainer = styled.div`
   position: fixed;
   width: 100%;
   z-index: 8;
-  height: 78px;
+  height: 59px;
 `
 
 const Navigation = styled.nav`
@@ -27,7 +27,8 @@ const Navigation = styled.nav`
   }
 `
 const LinkContainer = styled.div`
-  padding: 30px;
+  padding: 23px;
+  font-size: 12px;
   display: inline-block;
   position: relative;
   z-index: 1;
@@ -38,18 +39,18 @@ const LinkContainer = styled.div`
   }
 
   @media only screen and (min-width: 769px) and (max-width: 992px) {
-        padding: 30px 15px;
+        padding: 23px 11px;
   }
 `
 
 const Selector = styled.div`
-  height: 50px;
+  height: 38px;
   display:inline-block;
   position:absolute;
-  left: 10px;
-  top: 15px;
+  left: 8px;
+  top: 11px;
   z-index:1;
-  border-radius:50px;
+  border-radius:38px;
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   background: linear-gradient(45deg, #9F496E 0%, #2B262D 100%);
 `
@@ -58,8 +59,8 @@ const MenuButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
-  font-size: 34px;
+  padding: 0 23px;
+  font-size: 26px;
   color: ${props => props.theme.primary};
 `
 const MobileContainer = styled.div`
@@ -73,7 +74,7 @@ const MobileMenu = styled.div`
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 78px;
+    top: 59px;
     bottom: 0;
     left: 0;
     right: 0;

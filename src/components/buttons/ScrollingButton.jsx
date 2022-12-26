@@ -10,9 +10,9 @@ const ButtonContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 8px;
     color: ${props => props.theme.fourth};
-    font-size: 20px;
+    font-size: 15px;
     cursor: pointer;
 `
 

@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
 
 const StyledGlobalStyle = createGlobalStyle`
+    :root {
+        font-size: 13px;
+    }
     * {
       font-family: Montserrat, sans-serif;
     }
@@ -10,7 +13,7 @@ const StyledGlobalStyle = createGlobalStyle`
         --color-third:  ${props => props.theme.third};
         --color-fourth: ${props => props.theme.fourth};
         margin: 0;
-        height: 100vh;
+        min-height: 100vh;
     }
     h2, h3, p {
         margin: 0;

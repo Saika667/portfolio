@@ -8,12 +8,16 @@ import { GlobalContext } from '../utils/context/global'
 const ProjectArt = styled.article`
     width: 45%;
     position: relative;
-    margin: 0 0 25px 0;
+    margin: 0 0 19px 0;
+
+    .description {
+        font-size: 13px;
+    }
 
     &:before, &:after {
         content: '';
         position: absolute;
-        height: 400px;
+        height: 300px;
         width: 100%;
         z-index: 1; 
         transition: 300ms ease;      
@@ -39,13 +43,13 @@ const ProjectArt = styled.article`
             }
 
             &:before {
-                top: -15px;
-                right: 15px;
+                top: -11px;
+                right: 11px;
             }
 
             &:after {
-                top: 15px;
-                right: -15px;
+                top: 11px;
+                right: -11px;
             }
         }
     }
@@ -70,7 +74,7 @@ const ProjectArt = styled.article`
     }
 `
 const ImageContainer = styled.div`
-    height: 400px;
+    height: 300px;
     position: relative;
     z-index: 2;
 
@@ -81,34 +85,35 @@ const ImageContainer = styled.div`
     }
 
     @media only screen and (max-width: 768px) {
-        height: 250px;
-        max-width: 350px;
+        height: 188px;
+        max-width: 263px;
     }
 
     @media only screen and (min-width: 769px) and (max-width: 992px) {
-        height: 250px;
+        height: 188px;
     }
 `
 
 const ProjectTitle = styled.h3`
     background-color: ${props => props.theme.primary};
     color: ${props => props.theme.fourth};
-    min-width: 150px;
+    font-size: 13px;
+    min-width: 113px;
     text-align: center;
-    padding: 10px;
+    padding: 8px;
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: 3;
 
     @media only screen and (max-width: 768px) {
-       top: 210px;
-       height: 20px;
+       top: 158px;
+       height: 15px;
     }
 
     @media only screen and (min-width: 769px) and (max-width: 992px) {
-        top: 210px;
-        height: 20px;
+        top: 158px;
+        height: 15px;
     }
 `
 
@@ -120,7 +125,7 @@ const ProjectDesc = styled.div`
     bottom: 0;
     right: 0;
     left: 0;
-    padding: 35px;
+    padding: 26px;
     background-color: rgba(55, 9, 74, 0.8);
     z-index: 2;
 
@@ -128,14 +133,14 @@ const ProjectDesc = styled.div`
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        margin: 10px 0 0 0;
+        margin: 8px 0 0 0;
 
         span {
-            padding: 0 0 0 10px;
+            padding: 0 0 0 8px;
         }
 
         div {
-            margin: 0 0 10px 0;
+            margin: 0 0 8px 0;
         }
     }
     //même fonctionnement tablet et téléphone
@@ -150,7 +155,7 @@ const ProjectDesc = styled.div`
 
         &.open {
             height: fit-content;
-            padding: 20px;
+            padding: 15px;
         }
     }
 `

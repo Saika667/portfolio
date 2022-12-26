@@ -2,27 +2,27 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const Title = styled.h2`
-    font-size: 25px;
+    font-size: 19px;
     color: ${props => props.theme.third};
     text-align: center;
     margin: 0;
-    padding: 20px 0;
+    padding: 15px 0;
 
     &:before, &:after {
         content: '{';
-        font-size: 40px;
-        margin-right: 10px;
+        font-size: 30px;
+        margin-right: 8px;
     }
     &:after {
         content: '}';
-        margin-left: 10px;
+        margin-left: 8px;
     }
 `
 
 export const WrapperContainer = styled.div`
     background-color: ${props => props.theme.primary};
-    min-height: 100vh;
-    padding: 100px 20px 20px 20px;
+    min-height: calc(100vh - 59px);
+    padding: 75px 15px 15px 15px;
     box-sizing: border-box;
 `
 

@@ -12,7 +12,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
 const subTitleAppearance = keyframes`
     0% {
-        transform: translateX(-350px);
+        transform: translateX(-263px);
         opacity: 0;
     }
     100% {
@@ -35,18 +35,18 @@ const SubTitleContainer = styled.div`
 
 const SubTitle = styled.h3`
     color: ${props => props.theme.fourth};
-    padding: 30px 0 30px 70px;
-    font-size: 28px;
+    padding: 23px 0 23px 53px;
+    font-size: 21px;
 `
 
 const FlowerContainer = styled.div`
     position: absolute;
-    top: 39px;
-    left: 34px;
+    top: 29px;
+    left: 26px;
 `
 
 const LeafComponent = styled(Leaf)`
-    top: 36px;
+    top: 27px;
     transform: rotate(45deg);
 `
 

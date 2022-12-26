@@ -4,7 +4,7 @@ import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import { darken } from 'polished'
 
 const ButtonContainer = styled.div`
-    margin: 10px auto;
+    margin: 8px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,10 +16,10 @@ const Button = styled.div`
     background-color: ${props => props.theme.fourth};
     color: ${props => props.theme.primary};
     border-radius: 50%;
-    font-size: 20px;
-    box-shadow: 0px 0px 9px 3px ${props => darken(0.3, props.theme.primary)};;
-    width: 40px;
-    height: 40px;
+    font-size: 16px;
+    box-shadow: 0px 0px 7px 2px ${props => darken(0.3, props.theme.primary)};;
+    width: 30px;
+    height: 30px;
     box-sizing: border-box;
     cursor: pointer;
 `

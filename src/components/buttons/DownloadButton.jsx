@@ -10,13 +10,13 @@ const ButtonContainer = styled.div`
 `
 const ButtonLink = styled(Link)`
     text-decoration: none;
-    padding: 15px 30px;
+    padding: 11px 23px;
     background-color: ${props => props.theme.fourth};
     color: ${props => props.theme.primary};
-    border-radius: 10px;
-    font-size: 20px;
+    border-radius: 8px;
+    font-size: 15px;
     display: flex;
-    width: 55px;
+    width: 41px;
     justify-content: space-between;
     transition: all 0.3s;
 

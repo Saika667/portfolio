@@ -91,7 +91,7 @@ const ColumnContent = styled.div.attrs(props => ({
     number: props.number
 }))`
     width: 20px;
-    height: 586px;
+    height: 540px;
     ${props => getTopOffset(props.number, 17)}
     position: absolute;
     right: 45px;
@@ -234,7 +234,7 @@ function getColumnValues(targetHeight) {
 function Column({ targetHeight }) {
     const { windowSize } = useContext(GlobalContext)
     if (windowSize.innerHeight < 800) {
-        targetHeight = windowSize.innerHeight - 70
+        targetHeight = windowSize.innerHeight - 59
     }
     let [numberOfLeafs, numberOfElements] = getColumnValues(targetHeight);
     if (windowSize.innerHeight > 800) {

@@ -6,8 +6,8 @@ const ButtonContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 30px;
-    font-size: 34px;
+    padding: 0 23px;
+    font-size: 26px;
     color: ${props => props.theme.primary};
 
     &:hover {

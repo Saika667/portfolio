@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const Button = styled.a`
     text-decoration: none;
     background-color: ${props => props.theme.secondary};
-    padding: 10px 20px;
-    border-radius: 4px;
+    padding: 8px 15px;
+    border-radius: 3px;
     display: flex;
     width: fit-content;
     font-weight: bold;
@@ -19,7 +19,7 @@ const Button = styled.a`
     }
 `
 const Text = styled.p`
-    padding: 0 0 0 10px;
+    padding: 0 0 0 8px;
 `
 
 function RedirectButton({url, icon, label}) {

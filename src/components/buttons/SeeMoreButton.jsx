@@ -4,15 +4,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 const ButtonContainer = styled.div`
-  margin: 20px auto;
+  margin: 15px auto;
 `
 const Button = styled.div`
-  padding: 10px 20px;
+  padding: 8px 15px;
   background-color: ${props => props.theme.primary};
-  border-radius: 10px;
+  border-radius: 8px;
   text-align: center;
-  font-size: 20px;
-  width: 150px;
+  font-size: 15px;
+  width: 113px;
   margin: auto;
   cursor: pointer;
 
@@ -36,7 +36,7 @@ const ButtonLink = styled(Link)`
 `
 
 const Text = styled.p`
-  padding: 0 0 0 10px;
+  padding: 0 0 0 8px;
 `
 
 function SeeMore({path}) {

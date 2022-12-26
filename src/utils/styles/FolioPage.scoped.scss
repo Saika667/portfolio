@@ -1,19 +1,19 @@
 .container {
     display: flex;
     flex-direction: column;
-    margin: 30px 0;
+    margin: 23px 0;
     flex-wrap: wrap;
 
     &-filter {
         display: flex;
         justify-content: space-evenly;
-        margin: 15px 0;
+        margin: 11px 0;
 
         &-elt {
             color: var(--color-primary);
             background-color: var(--color-secondary);
-            border-radius: 50px;
-            padding: 15px 20px;
+            border-radius: 38px;
+            padding: 11px 15px;
             cursor: pointer;
 
             &.active {
@@ -21,7 +21,7 @@
             }
 
             span {
-                padding: 0 0 0 10px;
+                padding: 0 0 0 8px;
             }
 
             &:hover {
@@ -35,8 +35,8 @@
         justify-content: space-evenly;
         flex-wrap: wrap;
         overflow: hidden;
-        padding: 20px 0;
-        max-width: 1200px;
+        padding: 15px 0;
+        max-width: 900px;
         min-width: 90%;
         margin: auto;
     }
@@ -51,12 +51,12 @@
             width: 90%;
             
             &-elt {
-                margin-bottom: 10px;
+                margin-bottom: 8px;
             }
         }
 
         &-project {
-            max-width: 350px;
+            max-width: 188px;
             min-width: auto;
         }
     }
@@ -71,7 +71,7 @@
             width: 90%;
             
             &-elt {
-                margin-bottom: 10px;
+                margin-bottom: 8px;
             }
         }
 

@@ -13,7 +13,7 @@
 @keyframes timelineStudy {
     0% {
         opacity: 0;
-        transform: translateX(-20px);
+        transform: translateX(-15px);
     }
     100% {
         opacity: 1;
@@ -23,7 +23,7 @@
 
 @keyframes timelineBar {
     0% {
-        transform: translateX(-760px);
+        transform: translateX(-570px);
         opacity: 0;
     }
     100% {
@@ -43,7 +43,7 @@
 
 @keyframes skillArea {
     0%{
-        transform: translateX(-600px);
+        transform: translateX(-450px);
         opacity: 0;
     }
     100% {
@@ -53,7 +53,7 @@
 }
 
 .container {
-    width: 1000px;
+    width: 750px;
     margin: auto;
 
     &-studies {
@@ -62,10 +62,10 @@
 
         &-study {
             background-color: var(--color-secondary);
-            padding: 10px;
-            width: 260px;
+            padding: 8px;
+            width: 195px;
             box-sizing: border-box;
-            border-radius: 10px;
+            border-radius: 8px;
             display: flex;
             justify-content: center;
             flex-direction: column;
@@ -74,49 +74,49 @@
             animation: timelineStudy 350ms linear forwards;
 
             h4 {
-                font-size: 15px;
+                font-size: 11px;
                 margin: 0;
             }
 
             p {
                 font-style: italic;
                 margin: 0;
-                font-size: 12px;
+                font-size: 9px;
             }
 
             span {
                 font-weight: bold;
-                font-size: 12px;
+                font-size: 9px;
             }
         }
     }
 }
 
 .timeline {
-    width: 760px;
+    width: 570px;
     margin: auto;
     position: relative;
-    height: 50px;
+    height: 38px;
     display: flex;
     align-items: center;
     overflow: hidden;
 
     &-bar {
-        height: 5px;
+        height: 4px;
         width: 100%;
         background-color: var(--color-secondary);
-        margin: 20px 0;
+        margin: 15px 0;
         animation: timelineBar 1050ms 950ms linear forwards;
         opacity: 0;
     }
 
     &-point {
-        height: 15px;
-        width: 15px;
+        height: 11px;
+        width: 11px;
         border-radius: 50%;
         background-color: var(--color-secondary);
         position: absolute;
-        top: 17px;
+        top: 13px;
         opacity: 0;
     }
 }
@@ -127,7 +127,7 @@
 }
 
 .second {
-    left: 380px;
+    left: 285px;
     animation: timelinePoint 750ms 1200ms linear forwards;
 }
 
@@ -142,7 +142,7 @@
     width: 100%;
 
     &-area {
-        padding: 15px;
+        padding: 11px;
         width: 30%;
         opacity: 0;
         animation: skillArea 500ms linear forwards;
@@ -157,10 +157,10 @@
                 h4 {
                     text-align: center;
                     text-transform: uppercase;
-                    font-size: 25px;
+                    font-size: 19px;
                     color: var(--color-secondary);
                     margin: 0;
-                    padding: 10px;
+                    padding: 8px;
                 }
             }
 
@@ -169,17 +169,17 @@
 
                 &.isOpen {
                     display: block;
-                    padding: 10px;
-                    min-height: 95px;
+                    padding: 8px;
+                    min-height: 71px;
                 }
 
                 &-item {
                     display: flex;
                     color: var(--color-fourth);
-                    padding: 3px 0;
+                    padding: 2px 0;
 
                     svg {
-                        padding: 0 10px 0 0;
+                        padding: 0 8px 0 0;
                     }
                 }
             }
@@ -193,7 +193,7 @@
         display: flex;
         flex-direction: row-reverse;
         width: auto;
-        max-width: 350px;
+        max-width: 263px;
 
         &-studies {
             flex-direction: column;
@@ -201,27 +201,27 @@
     }
 
     .timeline {
-        height: 370px;
-        width: 15px;
+        height: 278px;
+        width: 11px;
 
         &-bar {
-            height: 280px;
-            width: 5px;
+            height: 210px;
+            width: 4px;
             margin: auto;
         }
     }
 
     .firth {
-        top: 44px;
+        top: 33px;
     }
     
     .second {
-        top: 185px;
+        top: 139px;
         left: 0;
     }
     
     .third {
-        top: 311px;
+        top: 242px;
         left: 0;
     }
 

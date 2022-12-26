@@ -10,8 +10,8 @@ const TitleContainer = styled.div`
 
 const DecorationTitle = styled.div`
   position: relative;
-  width: 70px;
-  height: 70px;
+  width: 53px;
+  height: 53px;
 
   &.after {
     transform: rotateY(180deg);
@@ -22,31 +22,31 @@ const FlowerContainer = styled.div`
   position: absolute;
 
   &.flower {
-    top: 20px;
-    left: 15px;
+    top: 15px;
+    left: 11px;
   }
 `
 
 const LeafComponent = styled(Leaf)`
   &.leafOne {
-    top: 34px;
-    left: -15px;
+    top: 26px;
+    left: -11px;
     transform: rotate(-9deg);
   }
 
   &.leafTwo {
-    top: 9px;
-    left: -10px;
+    top: 7px;
+    left: -8px;
     transform: rotate(57deg);
   }
 `
 
 const TitleComponent = styled.h2`
-  font-size: 25px;
+  font-size: 19px;
   color: ${props => props.theme.third};
   text-align: center;
   margin: 0;
-  padding: 20px 0;
+  padding: 15px 0;
 `
 function Title({label}) {
     return (
