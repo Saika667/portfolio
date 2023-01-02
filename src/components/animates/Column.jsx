@@ -91,7 +91,7 @@ const ColumnContent = styled.div.attrs(props => ({
     number: props.number
 }))`
     width: 20px;
-    height: 540px;
+    height: ${props => props.number * 370 / 22}px;
     ${props => getTopOffset(props.number, 17)}
     position: absolute;
     right: 45px;

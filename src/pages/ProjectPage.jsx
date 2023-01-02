@@ -80,7 +80,9 @@ function ProjectPage() {
                         <h3>Code source et accès projet</h3>
                         <div className='project-desc-div-btn'>
                         <RedirectButton url={project.code} icon={faGithub} label={"Code"}/>
-                        <RedirectButton url={project.site} icon={faArrowPointer} label={"Projet"}/>
+                        
+                        {project.site === '' ? null : 
+                        <RedirectButton url={project.site} icon={faArrowPointer} label={"Projet"}/>}
                         </div>
                     </div>
                     <CornerFlower className={'bottom'}/>

@@ -87,8 +87,7 @@ function Header({ currentTheme, setTheme }) {
     '/': 0,
     '/folio': 1,
     '/skills': 2,
-    '/experiences': 3,
-    '/animation': 4
+    '/experiences': 3
   }
   const path = window.location.pathname
   const initialIndex = pathIndex.hasOwnProperty(path) ? pathIndex[path] : 0
@@ -97,9 +96,8 @@ function Header({ currentTheme, setTheme }) {
   let secondMenuRef = createRef()
   let thirdMenuRef = createRef()
   let fourthMenuRef = createRef()
-  let fifthMenuRef = createRef()
   let selectorRef = createRef()
-  let menuRefs = [firstMenuRef, secondMenuRef, thirdMenuRef, fourthMenuRef, fifthMenuRef];
+  let menuRefs = [firstMenuRef, secondMenuRef, thirdMenuRef, fourthMenuRef];
   let firstRender = 0;
 
   useEffect(() => {
@@ -140,11 +138,6 @@ function Header({ currentTheme, setTheme }) {
           <LinkContainer className={`${navMenuActive === 3 ? 'active' : ''}`} ref={fourthMenuRef}>
             <StyledLink to="/experiences" onClick={() => {setNavMenuActive(3)}}>Expériences</StyledLink>
           </LinkContainer>
-          {device === 'tablet' ? null : (
-            <LinkContainer className={`${navMenuActive === 4 ? 'active' : ''}`} ref={fifthMenuRef}>
-              <StyledLink to="/animation" onClick={() => {setNavMenuActive(4)}}>Animation</StyledLink>
-            </LinkContainer>
-          )}
         </Navigation>
 
         {device === 'mobile' &&

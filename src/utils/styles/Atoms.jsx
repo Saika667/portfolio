@@ -21,7 +21,7 @@ export const Title = styled.h2`
 
 export const WrapperContainer = styled.div`
     background-color: ${props => props.theme.primary};
-    min-height: calc(100vh - 59px);
+    min-height: 100vh;
     padding: 75px 15px 15px 15px;
     box-sizing: border-box;
 `

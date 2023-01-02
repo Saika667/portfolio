@@ -41,8 +41,8 @@ const SubTitle = styled.h3`
 
 const FlowerContainer = styled.div`
     position: absolute;
-    top: 29px;
-    left: 26px;
+    top: 30px;
+    left: 30px;
 `
 
 const LeafComponent = styled(Leaf)`
