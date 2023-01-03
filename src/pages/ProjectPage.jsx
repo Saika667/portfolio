@@ -11,6 +11,7 @@ import './../utils/styles/ProjectPage.scoped.scss'
 import Title from '../components/Title'
 import { useEffect, useState, useContext, createRef } from 'react'
 import { GlobalContext } from '../utils/context/global'
+import BackButton from '../components/buttons/BackButton'
 
 function ProjectPage() {
     const { projectId } = useParams();
@@ -32,6 +33,8 @@ function ProjectPage() {
         <WrapperContainer>
             <Title label={project.name} />
 
+            <BackButton />
+            
             <article className='project'>
                 <div className='project-desc' ref={projectDescRef}>
                     <CornerFlower className={'top'}/>
@@ -97,16 +100,17 @@ function ProjectPage() {
                 
 
                 <div className='project-illust'>
-                    {project.images.length === 0 ? (
+                    { project.images.length === 0 &&
                         <img src={project.cover} alt="project cover" />
-                    ) : (
+                    }
+                    { project.images.length !== 0 &&
                         project.images.map((image, index) => (
                             <div className='project-illust-picture' key={index}>
                                 <p>{image.caption}</p>
                                 <img src={image.image} alt={image.caption} key={index}/>
                             </div>
                         ))
-                    )}
+                    }
                 </div>
             </article>
         </WrapperContainer>

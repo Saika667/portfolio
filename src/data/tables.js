@@ -7,6 +7,7 @@ import piiquante from '../assets/piiquante.png'
 import groupomania from '../assets/groupomania.png'
 import { faNodeJs, faVuejs, faReact, faSass, faJsSquare, faHtml5, faCss3Alt } from '@fortawesome/free-brands-svg-icons'
 import { faDatabase } from '@fortawesome/free-solid-svg-icons'
+import portfolio from '../assets/portfolio-1.png'
 
 export const skillsTable = [
     {
@@ -345,7 +346,7 @@ export const projectsTable = [
         context: 'Ce portfolio a été réalisé dans le but de trouver une alternance pour la formation Developpeur d\'application - JavaScript React chez Openclassrooms.',
         specifications: ['Aucune'],
         images: [],
-        cover: groupomania,
+        cover: portfolio,
         code: 'https://github.com/Saika667/portfolio',
         site: ''
     },

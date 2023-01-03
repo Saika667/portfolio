@@ -169,6 +169,7 @@ function Project({image, title, technologies, skills, index, projectId}) {
             <ImageContainer>
                 <img src={image} alt="logo projet"/>
             </ImageContainer>
+
             <ProjectTitle>{title}</ProjectTitle>
 
             {device === 'mobile' && <ArrowButton isOpenDesc={isOpenDesc} setOpenDesc={setOpenDesc}/>}
