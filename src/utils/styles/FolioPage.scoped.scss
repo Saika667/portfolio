@@ -56,7 +56,7 @@
         }
 
         &-project {
-            max-width: 188px;
+            max-width: 80%;
             min-width: auto;
         }
     }
@@ -82,7 +82,8 @@
     .container {
 
         &-filter {
-            max-width: 1300px;
+            width: 1300px;
+            margin: 50px auto;
         }
     }
 }

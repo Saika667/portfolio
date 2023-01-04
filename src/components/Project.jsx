@@ -84,10 +84,6 @@ const ImageContainer = styled.div`
         object-fit: cover;
     }
 
-    @media only screen and (max-width: 768px) {
-        height: 188px;
-    }
-
     @media only screen and (min-width: 769px) and (max-width: 992px) {
         height: 188px;
     }
@@ -110,7 +106,7 @@ const ProjectTitle = styled.h3`
     z-index: 3;
 
     @media only screen and (max-width: 768px) {
-       top: 158px;
+       top: 269px;
        height: 15px;
     }
 
