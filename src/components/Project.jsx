@@ -101,12 +101,7 @@ const ProjectTitle = styled.h3`
     right: 0;
     z-index: 3;
 
-    @media only screen and (max-width: 768px) {
-       top: 269px;
-       height: 15px;
-    }
-
-    @media only screen and (min-width: 769px) and (max-width: 992px) {
+    @media only screen and (max-width: 992px) {
         top: 269px;
         height: 15px;
     }

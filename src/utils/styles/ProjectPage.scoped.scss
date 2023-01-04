@@ -154,3 +154,19 @@ div::-webkit-scrollbar-track {
         }
     }
 }
+
+@media only screen and (min-width: 1300px) {
+    .project {
+        &-desc {
+            padding: 70px;
+
+            &-div {
+                margin: 20px 0;
+
+                h3 {
+                    padding: 15px 0;
+                }
+            }
+        }
+    }
+}
