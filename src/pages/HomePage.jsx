@@ -18,8 +18,9 @@ export const AboutContainer = styled.div`
         flex-direction: column;
     }
 
-    @media only screen and (min-width: 993px) {
-        
+    @media only screen and (min-width: 1300px) {
+        max-width: 1300px;
+        margin-top: 50px;
     }
 `
 

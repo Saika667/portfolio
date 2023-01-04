@@ -6,7 +6,7 @@ const colors = {
         fourth: '#391335',
     },
     darkMode: {
-        primary: '#391335',
+        primary: '#210D25',
         secondary: '#9F496E',
         third: '#647295',
         fourth: '#F2EBE5'

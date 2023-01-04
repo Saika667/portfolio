@@ -31,6 +31,11 @@ const SubTitleContainer = styled.div`
     &.subtitle-two {    
         animation: ${subTitleAppearance} 500ms 2000ms linear forwards;
     }
+
+    @media only screen and (min-width: 1300px) {
+        max-width: 1400px; 
+        margin: auto;
+    }
 `
 
 const SubTitle = styled.h3`

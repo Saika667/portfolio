@@ -92,6 +92,10 @@ const ImageContainer = styled.div`
     @media only screen and (min-width: 769px) and (max-width: 992px) {
         height: 188px;
     }
+
+    @media only screen and (min-width: 1300px) {
+        max-height: 400px; 
+    }
 `
 
 const ProjectTitle = styled.h3`

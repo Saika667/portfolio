@@ -77,3 +77,12 @@
 
     }
 }
+
+@media only screen and (min-width: 1300px) {
+    .container {
+
+        &-filter {
+            max-width: 1300px;
+        }
+    }
+}

@@ -123,7 +123,7 @@ div::-webkit-scrollbar-track {
         }
         
         &-illust {
-            width: 100%;
+            width: 90%;
             max-height: fit-content;
             padding: 0;
             margin-top: 60px;
@@ -139,7 +139,7 @@ div::-webkit-scrollbar-track {
         &-desc {
             width: 80%;
             position: relative;
-            padding: 34px;
+            padding: 45px 34px 34px 45px;
         }
 
         &-column {
@@ -147,7 +147,7 @@ div::-webkit-scrollbar-track {
         }
 
         &-illust {
-            width: 100%;
+            width: 85%;
             max-height: fit-content;
             padding: 0;
             margin-top: 60px;

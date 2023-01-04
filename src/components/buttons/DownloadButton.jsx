@@ -1,14 +1,15 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
+import pdf from "../../assets/CV-dev-2022.pdf"
 
 const ButtonContainer = styled.div`
     cursor: pointer;
     display: flex;
     justify-content: flex-end;
 `
-const ButtonLink = styled(Link)`
+const ButtonLink = styled.a`
     text-decoration: none;
     padding: 11px 23px;
     background-color: ${props => props.theme.fourth};
@@ -34,7 +35,7 @@ const Text = styled.p`
 function DownloadButton() {
   return (
     <ButtonContainer>
-        <ButtonLink to="/">
+        <ButtonLink href={pdf} download="cv-soudrain-celine.pdf">
           <FontAwesomeIcon icon={faFileArrowDown} />
           <Text>CV</Text>
         </ButtonLink>
