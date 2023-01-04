@@ -86,7 +86,6 @@ const ImageContainer = styled.div`
 
     @media only screen and (max-width: 768px) {
         height: 188px;
-        max-width: 263px;
     }
 
     @media only screen and (min-width: 769px) and (max-width: 992px) {
