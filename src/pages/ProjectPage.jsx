@@ -34,13 +34,13 @@ function ProjectPage() {
             <Title label={project.name} />
 
             <BackButton />
-            
+
             <article className='project'>
                 <div className='project-desc' ref={projectDescRef}>
                     <CornerFlower className={'top'}/>
                     {project.openclassroom === true ? (
                         <p className='project-desc-formation'>
-                            Ce projet a été réaliser dans le cadre de la formation <span>Développeur Web</span> chez <span>Openclassrooms</span>.
+                            Ce projet a été réalisé dans le cadre de la formation <span>Développeur Web</span> chez <span>Openclassrooms</span>.
                         </p>
                     ) : null}
 
