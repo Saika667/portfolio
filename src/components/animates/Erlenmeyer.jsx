@@ -3,9 +3,9 @@ import { lighten } from 'polished'
 
 function animationDelay(bubbleNumber, delay, className) {
     let style = '';
-    for(let i = 0; i < bubbleNumber; i++) {
+    for(let i = 0; i <= bubbleNumber; i++) {
         style += `
-            & .${className}:nth-child(${i + 1}n) {
+            & .${className}:nth-child(${i + 1}) {
                 animation-delay: ${delay * i}ms;
             }
         `
@@ -113,9 +113,13 @@ const LabContainer = styled.div `
     height: 500px;
     position: relative;
     overflow: hidden;
+`
+
+const BubbleGroups = styled.div `
+    //8, 900 / 8, 300 / 8, 800
     ${animationDelay(8, 900, 'right')}
     ${animationDelay(8, 300, 'center')}
-    ${animationDelay(8, 800, 'left')}
+    ${animationDelay(8, 750, 'left')}
 `
 /*-----------------------------FIN Globale --------------------------------*/
 /*-----------------------------Erlenmeyer --------------------------------*/
@@ -372,80 +376,86 @@ const TopFlameRed = styled.div`
 function Erlenmeyer() {
     return (
         <LabContainer>
-            <BubbleContainer className='bubble left'>
-                <Bubble />
-            </BubbleContainer>
-            <BubbleContainer className='bubble left'>
-                <Bubble outerSize={20} innerSize={8} />
-            </BubbleContainer>
-            <BubbleContainer className='bubble left'>
-                <Bubble outerSize={15} innerSize={8} />
-            </BubbleContainer>
-            <BubbleContainer className='bubble left'>
-                <Bubble outerSize={35} innerSize={15} />
-            </BubbleContainer>
-            <BubbleContainer className='bubble left'>
-                <Bubble outerSize={25} innerSize={10} />
-            </BubbleContainer>
-            <BubbleContainer className='bubble left'>
-                <Bubble outerSize={13} innerSize={5} />
-            </BubbleContainer>
-            <BubbleContainer className='bubble left'>
-                <Bubble outerSize={17} innerSize={8} />
-            </BubbleContainer>
-            <BubbleContainer className='bubble left'>
-                <Bubble outerSize={28} innerSize={11} />
-            </BubbleContainer>
+            <BubbleGroups>
+                <BubbleContainer className='bubble left'>
+                    <Bubble />
+                </BubbleContainer>
+                <BubbleContainer className='bubble left'>
+                    <Bubble outerSize={20} innerSize={8} />
+                </BubbleContainer>
+                <BubbleContainer className='bubble left'>
+                    <Bubble outerSize={15} innerSize={8} />
+                </BubbleContainer>
+                <BubbleContainer className='bubble left'>
+                    <Bubble outerSize={35} innerSize={15} />
+                </BubbleContainer>
+                <BubbleContainer className='bubble left'>
+                    <Bubble outerSize={25} innerSize={10} />
+                </BubbleContainer>
+                <BubbleContainer className='bubble left'>
+                    <Bubble outerSize={13} innerSize={5} />
+                </BubbleContainer>
+                <BubbleContainer className='bubble left'>
+                    <Bubble outerSize={17} innerSize={8} />
+                </BubbleContainer>
+                <BubbleContainer className='bubble left'>
+                    <Bubble outerSize={28} innerSize={11} />
+                </BubbleContainer>
+            </BubbleGroups>
 
-            <BubbleContainer className='bubble center'>
-                <Bubble />
-            </BubbleContainer>
-            <BubbleContainer className='bubble center'>
-                <Bubble outerSize={20} innerSize={8} />
-            </BubbleContainer>
-            <BubbleContainer className='bubble center'>
-                <Bubble outerSize={15} innerSize={8} />
-            </BubbleContainer>
-            <BubbleContainer className='bubble center'>
-                <Bubble outerSize={13} innerSize={5} />
-            </BubbleContainer>
-            <BubbleContainer className='bubble center'>
-                <Bubble outerSize={25} innerSize={10} />
-            </BubbleContainer>
-            <BubbleContainer className='bubble center'>
-                <Bubble outerSize={35} innerSize={15} />
-            </BubbleContainer>
-            <BubbleContainer className='bubble center'>
-                <Bubble outerSize={17} innerSize={8} />
-            </BubbleContainer>
-            <BubbleContainer className='bubble center'>
-                <Bubble outerSize={28} innerSize={11} />
-            </BubbleContainer>
+            <BubbleGroups>
+                <BubbleContainer className='bubble center'>
+                    <Bubble />
+                </BubbleContainer>
+                <BubbleContainer className='bubble center'>
+                    <Bubble outerSize={20} innerSize={8} />
+                </BubbleContainer>
+                <BubbleContainer className='bubble center'>
+                    <Bubble outerSize={15} innerSize={8} />
+                </BubbleContainer>
+                <BubbleContainer className='bubble center'>
+                    <Bubble outerSize={13} innerSize={5} />
+                </BubbleContainer>
+                <BubbleContainer className='bubble center'>
+                    <Bubble outerSize={25} innerSize={10} />
+                </BubbleContainer>
+                <BubbleContainer className='bubble center'>
+                    <Bubble outerSize={35} innerSize={15} />
+                </BubbleContainer>
+                <BubbleContainer className='bubble center'>
+                    <Bubble outerSize={17} innerSize={8} />
+                </BubbleContainer>
+                <BubbleContainer className='bubble center'>
+                    <Bubble outerSize={28} innerSize={11} />
+                </BubbleContainer>
+            </BubbleGroups>
 
-            <BubbleContainer className='bubble right'>
-                <Bubble outerSize={28} innerSize={11} />
-            </BubbleContainer>
-            <BubbleContainer className='bubble right'>
-                <Bubble outerSize={17} innerSize={8} />
-            </BubbleContainer>
-            <BubbleContainer className='bubble right'>
-                <Bubble outerSize={13} innerSize={5} />
-            </BubbleContainer>
-            <BubbleContainer className='bubble right'>
-                <Bubble outerSize={25} innerSize={10} />
-            </BubbleContainer>
-            <BubbleContainer className='bubble right'>
-                <Bubble outerSize={35} innerSize={15} />
-            </BubbleContainer>
-            <BubbleContainer className='bubble right'>
-                <Bubble outerSize={15} innerSize={8} />
-            </BubbleContainer>
-            <BubbleContainer className='bubble right'>
-                <Bubble outerSize={20} innerSize={8} />
-            </BubbleContainer>
-            <BubbleContainer className='bubble right'>
-                <Bubble />
-            </BubbleContainer>
+            <BubbleGroups>
+                <BubbleContainer className='bubble right'>
+                    <Bubble outerSize={28} innerSize={11} />
+                </BubbleContainer>
+                <BubbleContainer className='bubble right'>
+                    <Bubble outerSize={17} innerSize={8} />
+                </BubbleContainer>
+                <BubbleContainer className='bubble right'>
+                    <Bubble outerSize={13} innerSize={5} />
+                </BubbleContainer>
+                <BubbleContainer className='bubble right'>
+                    <Bubble outerSize={25} innerSize={10} />
+                </BubbleContainer>
+                <BubbleContainer className='bubble right'>
+                    <Bubble outerSize={35} innerSize={15} />
+                </BubbleContainer>
+                <BubbleContainer className='bubble right'>
+                    <Bubble outerSize={15} innerSize={8} />
+                </BubbleContainer>
+                <BubbleContainer className='bubble right'>
+                    <Bubble outerSize={20} innerSize={8} />
+                </BubbleContainer>
+                <BubbleContainer className='bubble right'>
+                    <Bubble />
+                </BubbleContainer>
+            </BubbleGroups>
             
             <ErlenmeyerContainer>
                 <ErlenmeyerBodyTop />

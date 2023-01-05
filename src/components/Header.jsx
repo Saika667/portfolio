@@ -89,7 +89,10 @@ function Header({ currentTheme, setTheme }) {
     '/skills': 2,
     '/experiences': 3
   }
-  const path = window.location.pathname
+  let path = window.location.hash.replace('#', '')
+  if (/^\/folio\/*/.test(path)) {
+    path = '/folio'
+  }
   const initialIndex = pathIndex.hasOwnProperty(path) ? pathIndex[path] : 0
   const [navMenuActive, setNavMenuActive] = useState(initialIndex)
   let firstMenuRef = createRef()

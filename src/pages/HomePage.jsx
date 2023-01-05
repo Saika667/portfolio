@@ -20,7 +20,7 @@ export const AboutContainer = styled.div`
 
     @media only screen and (min-width: 1300px) {
         max-width: 1300px;
-        margin-top: 50px;
+        margin: 50px auto;
     }
 `
 
