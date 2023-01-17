@@ -74,7 +74,7 @@ export const experiencesTable = [
         job: 'Assistante QHSE',
         company: 'Phytéo Laboratoire',
         contract: 'Intérimaire',
-        date: 'Janvier-Juin 2020',
+        date: 'Janvier - Juin 2020',
         category: 'lab'
     },
     {
@@ -187,7 +187,7 @@ export const projectsTable = [
         Avant de valider le nouveau design, Booki souhaite réaliser un prototype à l'aide de la maquette.`,
         specifications: ['Le site doit suivre les maquettes desktop et mobile, mais doit aussi être adapté aux formats tablette.',
         'Il est interdit d\'utiliser Grid, un framework CSS (type BootStrap ou Tailwind CSS), un processeur CSS (type Sass ou Less).',
-        'Le code doit être validé aux validateurs W3C HTML et CSS.'],
+        'Le code doit être conforme aux validateurs W3C HTML et CSS.'],
         images: [
             {
                 image: desktop, 
@@ -220,10 +220,10 @@ export const projectsTable = [
         'Mettre en place une structure de navigation pour un site web',
         'Utiliser un système de gestion de versions pour le suivi du projet et son hébergement'],
         openclassroom: true,
-        context: `Recruté chez Ohmyfood, en tant que développeur junior. L'entreprise Ohmyfood est une startup qui souhaite s'imposer 
+        context: `Recrutée chez Ohmyfood, en tant que développeuse junior. L'entreprise Ohmyfood est une startup qui souhaite s'imposer 
         sur le marché de la restauration. L'objectif est de développer un site 100% mobile.`,
         specifications: ['Il est interdit d\'utiliser du JavaScript, un framework.', 
-        'Le code doit être validé aux validateurs W3C HTML et CSS.',
+        'Le code doit être conforme aux validateurs W3C HTML et CSS.',
         'Les animations d\'apparition de menu, lorsque l\'utilisateur se rend sur une page menu, et de coche, lorsque l\'utilisateur souhaite ajouter un plat, doivent correspondre à la maquette.',
         'Un "loading spinner" est nécessaire, le design n\'est pas défini. Le "loading spinner" doit apparaitre 1 à 3 secondes, recouvrir l\'intégralité de l\'écran et doit respecter l\'identité graphique du site.'],
         images: [],
@@ -245,10 +245,10 @@ export const projectsTable = [
         'Gérer des événements JavaScript'],
         openclassroom: true,
         context: `L'entreprise Kanap souhaite avoir une plateforme de e-commerce. La partie HTML / CSS a déjà été réalisée, je suis chargée de l'implémentation dynamique.`,
-        specifications: ['Il et interdit d\'utiliser un framework ou librairie JavaScript.',
+        specifications: ['Il est interdit d\'utiliser un framework ou librairie JavaScript.',
         'La page d\'accueil présente l\'ensemble des produits retournés par l\'API.',
         'La page produit présente un seul produit, l\'utilisateur peut choisir une option de personnalisation et saisir une quantité dans l\'input. Ces éléments doivent être pris en compte dans le panier',
-        'La page panier affiche le panier et affiche le total à payer, la quantité des produits peut être modifier. Le produit peut aussi être supprimé. Les inputs du formulaire doivent être vérifiés avant l\'envoi des données à l\'API.',
+        'La page panier affiche le panier et affiche le total à payer, la quantité des produits peut être modifiée. Le produit peut aussi être supprimé. Les inputs du formulaire doivent être vérifiés avant l\'envoi des données à l\'API.',
         'Le prix des articles ne doit pas être stocké dans le local storage.',
         'La page de confirmation doit afficher le numéro de commande, ce numéro ne doit être stocké nulle part.'],
         images: [],
@@ -316,12 +316,12 @@ export const projectsTable = [
         specifications: ['Il est obligatoire d\'utiliser un framework JavaScript.',
         'Un utilisateur se connecte à partir d\'un mail et d\'un mot de passe. La session de l\'utilisateur persiste pendant qu\'il est connecté et les données de connexion doivent être sécurisées. Il doit être possible de se déconnecter.',
         'La page d\'accueil doit lister les posts créés de façon antéchronologique',
-        'Un utilisateur doit pour voir créer un post, s\'il est le propriétaire du post il peut le modifier ou le supprimer. Un post peut contenir du texte ou une image, ou les deux.',
+        'Un utilisateur doit pouvoir créer un post, s\'il est le propriétaire du post il peut le modifier ou le supprimer. Un post peut contenir du texte ou une image, ou les deux.',
         'Un utilisateur doit pouvoir liker un post, une seule fois.',
-        'Un compte administrateur doit être créé. Dans le but de pouvoir modérer, ce compte aure les droits de modifications / suppression sur tous les posts et comptes du réseau social.'],
+        'Un compte administrateur doit être créé. Dans le but de pouvoir modérer, ce compte aure les droits de modification / suppression sur tous les posts et comptes du réseau social.'],
         images: [],
         cover: groupomania,
-        code: 'https://github.com/Saika667/P7_Groupomania_vue',
+        code: 'https://github.com/Saika667/groupomania',
         site: 'https://groupomania-frontend.vercel.app/'
     },
     {
