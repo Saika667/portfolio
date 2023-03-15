@@ -8,6 +8,7 @@ import groupomania from '../assets/groupomania.png'
 import { faNodeJs, faVuejs, faReact, faSass, faJsSquare, faHtml5, faCss3Alt } from '@fortawesome/free-brands-svg-icons'
 import { faDatabase } from '@fortawesome/free-solid-svg-icons'
 import portfolio from '../assets/portfolio-1.png'
+import memory from '../assets/memory.png'
 
 export const skillsTable = [
     {
@@ -349,5 +350,31 @@ export const projectsTable = [
         cover: portfolio,
         code: 'https://github.com/Saika667/portfolio',
         site: ''
+    },
+    {
+        id: 'pr7',
+        name: 'Memory',
+        technologies: [
+            {
+                name: 'HTML',
+                logo: faHtml5
+            },
+            {
+                name: 'SCSS',
+                logo: faSass
+            },
+            {
+                name: 'Framework React',
+                logo: faReact
+            }
+        ],
+        skills: ['Travailler la logique de React.', 'Se familiariser avec les Hooks.', 'Réaliser des dessins simples en SCSS.'],
+        openclassroom: false,
+        context: 'Ce projet a été réalisé dans le but de mettre en avant mes compétences et de trouver une alternance pour la formation Developpeur d\'application - JavaScript React chez Openclassrooms.',
+        specifications: ['Aucune'],
+        images: [],
+        cover: memory,
+        code: 'https://github.com/Saika667/memory',
+        site: 'https://saika667.github.io/Memory'
     },
 ]
