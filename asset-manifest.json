@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.f67ac160.css",
-    "main.js": "/portfolio/static/js/main.25f7e5ef.js",
+    "main.css": "/portfolio/static/css/main.d7c8ea2c.css",
+    "main.js": "/portfolio/static/js/main.8256146d.js",
     "static/js/787.5fe8911e.chunk.js": "/portfolio/static/js/787.5fe8911e.chunk.js",
     "static/media/desktop.png": "/portfolio/static/media/desktop.194ce640491309c8803c.png",
     "static/media/telephone.png": "/portfolio/static/media/telephone.c2c14f728cbe5c1583e0.png",
     "static/media/memory.png": "/portfolio/static/media/memory.136cb8df059a5feb1976.png",
-    "static/media/CV_céline_soudrain_altern_2023.pdf": "/portfolio/static/media/CV_céline_soudrain_altern_2023.860a785a1b9ccf66aa6b.pdf",
     "static/media/portfolio-1.png": "/portfolio/static/media/portfolio-1.7cfb2770a73111c7a753.png",
+    "static/media/CV-dev-2022.pdf": "/portfolio/static/media/CV-dev-2022.71edbfa47fe4a76ccc98.pdf",
     "static/media/kanap.png": "/portfolio/static/media/kanap.c24cbb84cb2d7cfa545e.png",
     "static/media/piiquante.png": "/portfolio/static/media/piiquante.d01fe506d98f1eb6c2e7.png",
     "static/media/booki.png": "/portfolio/static/media/booki.88c3892df491a7940d4f.png",
     "static/media/profil.jpg": "/portfolio/static/media/profil.1cecd91edc9a38a0582f.jpg",
     "index.html": "/portfolio/index.html",
-    "main.f67ac160.css.map": "/portfolio/static/css/main.f67ac160.css.map",
-    "main.25f7e5ef.js.map": "/portfolio/static/js/main.25f7e5ef.js.map",
+    "main.d7c8ea2c.css.map": "/portfolio/static/css/main.d7c8ea2c.css.map",
+    "main.8256146d.js.map": "/portfolio/static/js/main.8256146d.js.map",
     "787.5fe8911e.chunk.js.map": "/portfolio/static/js/787.5fe8911e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f67ac160.css",
-    "static/js/main.25f7e5ef.js"
+    "static/css/main.d7c8ea2c.css",
+    "static/js/main.8256146d.js"
   ]
 }
