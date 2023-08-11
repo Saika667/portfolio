@@ -131,6 +131,7 @@ const ProjectDesc = styled.div`
 
         div {
             margin: 0 0 8px 0;
+            display: flex;
         }
     }
     //même fonctionnement tablet et téléphone

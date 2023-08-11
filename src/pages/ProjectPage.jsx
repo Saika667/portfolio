@@ -54,7 +54,7 @@ function ProjectPage() {
                         <h3>Technologies utilisées</h3>
                         <div className='project-desc-div-techno'>
                             {project.technologies.map((techno, index) => (
-                                <div key={index}>
+                                <div key={index} className='project-desc-div-techno-elt'>
                                     <Svg type={'project'} image={techno.logo} />
                                     <span>{techno.name}</span>
                                 </div>
