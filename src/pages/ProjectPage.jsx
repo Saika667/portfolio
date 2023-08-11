@@ -12,6 +12,7 @@ import Title from '../components/Title'
 import { useEffect, useState, useContext, createRef } from 'react'
 import { GlobalContext } from '../utils/context/global'
 import BackButton from '../components/buttons/BackButton'
+import Svg from '../components/Svg'
 
 function ProjectPage() {
     const { projectId } = useParams();
@@ -54,7 +55,7 @@ function ProjectPage() {
                         <div className='project-desc-div-techno'>
                             {project.technologies.map((techno, index) => (
                                 <div key={index}>
-                                    <FontAwesomeIcon icon={techno.logo} />
+                                    <Svg type={'project'} image={techno.logo} />
                                     <span>{techno.name}</span>
                                 </div>
                             ))}

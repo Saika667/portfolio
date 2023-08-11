@@ -15,6 +15,7 @@
             border-radius: 38px;
             padding: 11px 15px;
             cursor: pointer;
+            display: flex;
 
             &.active {
                 background-color: var(--color-third);
@@ -36,8 +37,8 @@
         flex-wrap: wrap;
         overflow: hidden;
         padding: 15px 0;
-        max-width: 900px;
-        min-width: 90%;
+        max-width: 1050px;
+        width: 90%;
         margin: auto;
     }
 }

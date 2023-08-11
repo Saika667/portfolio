@@ -1,9 +1,9 @@
 import SeeMore from './buttons/SeeMoreButton'
 import styled from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ArrowButton from './buttons/ArrowButton'
-import { useContext, useState } from 'react';
+import { useContext, useState } from 'react'
 import { GlobalContext } from '../utils/context/global'
+import Svg from './Svg'
 
 const ProjectArt = styled.article`
     width: 45%;
@@ -170,7 +170,7 @@ function Project({image, title, technologies, skills, index, projectId}) {
                 <div className='techno'>
                     {technologies.map((techno, index) => (
                         <div key={index}>
-                            <FontAwesomeIcon icon={techno.logo} />
+                            <Svg type={'folio'} image={techno.logo} />
                             <span>{techno.name}</span>
                         </div>
                     ))}

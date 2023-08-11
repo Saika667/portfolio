@@ -5,10 +5,18 @@ import ohmyfood from '../assets/ohmyfood.png'
 import kanap from '../assets/kanap.png'
 import piiquante from '../assets/piiquante.png'
 import groupomania from '../assets/groupomania.png'
-import { faNodeJs, faVuejs, faReact, faSass, faJsSquare, faHtml5, faCss3Alt } from '@fortawesome/free-brands-svg-icons'
-import { faDatabase } from '@fortawesome/free-solid-svg-icons'
 import portfolio from '../assets/portfolio-1.png'
 import memory from '../assets/memory.png'
+import minesweeper from '../assets/minesweeper.png'
+import { ReactComponent as Redux} from '../assets/redux.svg'
+import {ReactComponent as Html5 } from '../assets/html5.svg'
+import {ReactComponent as Css } from '../assets/css.svg'
+import {ReactComponent as Sass } from '../assets/sass.svg'
+import {ReactComponent as Js } from '../assets/javascript.svg'
+import {ReactComponent as NodeJs } from '../assets/nodejs.svg'
+import {ReactComponent as Database } from '../assets/database.svg'
+import {ReactComponent as VueJs } from '../assets/vuejs.svg'
+import {ReactComponent as React } from '../assets/react.svg'
 
 export const skillsTable = [
     {
@@ -29,12 +37,12 @@ export const skillsTable = [
     {
         id: 'sk4',
         category: 'frontend',
-        skill: 'Framework Vue',
+        skill: 'VueJS',
     },
     {
         id: 'sk5',
         category: 'frontend',
-        skill: 'Framework React',
+        skill: 'React',
     },
     {
         id: 'sk6',
@@ -51,15 +59,20 @@ export const skillsTable = [
         category: 'autre',
         skill: 'MongoDB',
     },
+    {
+        id: 'sk9',
+        category: 'autre',
+        skill: 'Redux Toolkit',
+    },
 ]
 
 export const experiencesTable = [
     {
         id: 'exp14',
-        job: 'En recherche d\'alternance',
+        job: 'En recherche d\'emploi',
         company: '',
-        contract: 'Alternance',
-        date: 'Durée de 2 ans',
+        contract: 'CDD / CDI',
+        date: 'Disponible immédiatemment',
         category: 'dev'
     },
     {
@@ -175,11 +188,11 @@ export const projectsTable = [
         technologies: [
             {
                 name: 'HTML',
-                logo: faHtml5
+                logo: <Html5 />,
             },
             {
                 name: 'CSS',
-                logo: faCss3Alt
+                logo: <Css />,
             }
         ],
         skills: ['Intégrer une maquette', 'Implémenter une interface responsive'],
@@ -209,11 +222,11 @@ export const projectsTable = [
         technologies: [
             {
                 name: 'HTML',
-                logo: faHtml5
+                logo: <Html5 />,
             },
             {
                 name: 'SCSS',
-                logo: faSass
+                logo: <Sass />,
             }
         ],
         skills: ['Mettre en oeuvre des effets CSS graphiques avancés', 
@@ -238,7 +251,7 @@ export const projectsTable = [
         technologies: [
             {
                 name: 'JavaScript',
-                logo: faJsSquare
+                logo: <Js />,
             },
         ],
         skills: ['Valider des données issues de sources externes', 
@@ -263,11 +276,11 @@ export const projectsTable = [
         technologies: [
             {
                 name: 'NodeJS',
-                logo: faNodeJs
+                logo: <NodeJs />,
             },
             {
                 name: 'MongoDB',
-                logo: faDatabase
+                logo: <Database />,
             }
         ],
         skills: ['Mettre en oeuvre des opérations CRUD de manière sécurisée.',
@@ -282,7 +295,7 @@ export const projectsTable = [
         images: [],
         cover: piiquante,
         code: 'https://github.com/Saika667/P6_Piiquante',
-        site: 'https://saika667.github.io/piiquante-frontend/login'
+        site: 'https://saika667.github.io/piiquante-frontend'
     },
     {
         id: 'pr5',
@@ -290,23 +303,23 @@ export const projectsTable = [
         technologies: [
             {
                 name: 'HTML',
-                logo: faHtml5
+                logo: <Html5 />,
             },
             {
                 name: 'SCSS',
-                logo: faSass
+                logo: <Sass />,
             },
             {
                 name: 'NodeJS',
-                logo: faNodeJs
+                logo: <NodeJs />,
             },
             {
-                name: 'Framework VueJS',
-                logo: faVuejs
+                name: 'VueJS',
+                logo: <VueJs />,
             },
             {
                 name: 'MongoDB',
-                logo: faDatabase
+                logo: <Database />,
             }
         ],
         skills: ['Authentifier un utilisateur et maintenir sa session.', 
@@ -331,20 +344,20 @@ export const projectsTable = [
         technologies: [
             {
                 name: 'HTML',
-                logo: faHtml5
+                logo: <Html5 />,
             },
             {
                 name: 'SCSS',
-                logo: faSass
+                logo: <Sass />,
             },
             {
-                name: 'Framework React',
-                logo: faReact
+                name: 'React',
+                logo: <React />,
             }
         ],
         skills: ['Appréhender le Framework React'],
         openclassroom: false,
-        context: 'Ce portfolio a été réalisé dans le but de trouver une alternance pour la formation Developpeur d\'application - JavaScript React chez Openclassrooms.',
+        context: 'Ce portfolio a été créé afin de présenter mes projets réalisés, dans le cadre de la formation Développeur Web chez Openclassrooms, ainsi que mes projets personnels. Les projets personnels ont été réalisés avec pour objectif d\'apprendre de nouvelles technologies.',
         specifications: ['Aucune'],
         images: [],
         cover: portfolio,
@@ -357,24 +370,54 @@ export const projectsTable = [
         technologies: [
             {
                 name: 'HTML',
-                logo: faHtml5
+                logo: <Html5 />,
             },
             {
                 name: 'SCSS',
-                logo: faSass
+                logo: <Sass />,
             },
             {
-                name: 'Framework React',
-                logo: faReact
+                name: 'React',
+                logo: <React />,
             }
         ],
         skills: ['Travailler la logique de React.', 'Se familiariser avec les Hooks.', 'Réaliser des dessins simples en SCSS.'],
         openclassroom: false,
-        context: 'Ce projet a été réalisé dans le but de mettre en avant mes compétences et de trouver une alternance pour la formation Developpeur d\'application - JavaScript React chez Openclassrooms.',
+        context: 'Ce projet a été réalisé dans le but de mettre en avant mes compétences et de trouver un premier emploi dans le monde du développement.',
         specifications: ['Aucune'],
         images: [],
         cover: memory,
         code: 'https://github.com/Saika667/memory',
         site: 'https://saika667.github.io/Memory'
+    },
+    {
+        id: 'pr8',
+        name: 'Démineur',
+        technologies: [
+            {
+                name: 'HTML',
+                logo: <Html5 />,
+            },
+            {
+                name: 'SCSS',
+                logo: <Sass />,
+            },
+            {
+                name: 'React',
+                logo: <React />,
+            },
+            {
+                name: 'Redux Toolkit',
+                logo: <Redux />,
+            }
+        ],
+        skills: ['Travailler la logique de React.', 'Apprendre à utiliser et mettre en place l\'outil Redux Toolkit.'],
+        openclassroom: false,
+        context: 'Ce projet a été réalisé dans le but de mettre en avant mes compétences et de trouver un premier emploi dans le monde du développement.',
+        specifications: ['Aucune'],
+        images: [],
+        cover: minesweeper,
+        code: 'https://github.com/Saika667/minesweeper',
+        site: 'https://saika667.github.io/minesweeper'
     },
 ]

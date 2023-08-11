@@ -2,7 +2,7 @@ import styled from 'styled-components'
 //import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
-import pdf from "../../assets/CV-dev-2022.pdf"
+import pdf from "../../assets/CV_dev.pdf"
 
 const ButtonContainer = styled.div`
     cursor: pointer;

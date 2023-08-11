@@ -1,10 +1,10 @@
 import { WrapperContainer } from './../utils/styles/Atoms'
 import './../utils/styles/FolioPage.scoped.scss'
-import Project from '../components/Project';
+import Project from '../components/Project'
 import { projectsTable } from '../data/tables.js'
-import { useState } from 'react';
-import Title from '../components/Title';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useState } from 'react'
+import Title from '../components/Title'
+import Svg from '../components/Svg'
 
 function FolioPage() {
     const [filters, setFilters] = useState([])
@@ -41,7 +41,7 @@ function FolioPage() {
                             key={techno.name}
                             onClick={() => toggleFilter(techno.name)}
                         >
-                            <FontAwesomeIcon icon={techno.logo} />
+                            <Svg type={'filter'} image={techno.logo}/>
                             <span>{techno.name}</span>
                         </div>
                     ))}
