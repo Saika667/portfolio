@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.476ee88c.css",
-    "main.js": "/portfolio/static/js/main.184927ae.js",
+    "main.js": "/portfolio/static/js/main.8e306bd1.js",
     "static/js/787.5fe8911e.chunk.js": "/portfolio/static/js/787.5fe8911e.chunk.js",
     "static/media/desktop.png": "/portfolio/static/media/desktop.194ce640491309c8803c.png",
     "static/media/telephone.png": "/portfolio/static/media/telephone.c2c14f728cbe5c1583e0.png",
     "static/media/memory.png": "/portfolio/static/media/memory.136cb8df059a5feb1976.png",
     "static/media/portfolio-1.png": "/portfolio/static/media/portfolio-1.7cfb2770a73111c7a753.png",
-    "static/media/CV_dev_alter_09_2023.pdf": "/portfolio/static/media/CV_dev_alter_09_2023.4477ea3604a893f79037.pdf",
+    "static/media/CV_dev_alter_09_2023.pdf": "/portfolio/static/media/CV_dev_alter_09_2023.d301543c5dad6384c25b.pdf",
     "static/media/CV_dev_09_2023.pdf": "/portfolio/static/media/CV_dev_09_2023.549d07cbbd52a8dbee99.pdf",
     "static/media/kanap.png": "/portfolio/static/media/kanap.c24cbb84cb2d7cfa545e.png",
     "static/media/piiquante.png": "/portfolio/static/media/piiquante.d01fe506d98f1eb6c2e7.png",
@@ -25,11 +25,11 @@
     "static/media/html5.svg": "/portfolio/static/media/html5.3a3caf175d3f88017eb674ffdef02216.svg",
     "index.html": "/portfolio/index.html",
     "main.476ee88c.css.map": "/portfolio/static/css/main.476ee88c.css.map",
-    "main.184927ae.js.map": "/portfolio/static/js/main.184927ae.js.map",
+    "main.8e306bd1.js.map": "/portfolio/static/js/main.8e306bd1.js.map",
     "787.5fe8911e.chunk.js.map": "/portfolio/static/js/787.5fe8911e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.476ee88c.css",
-    "static/js/main.184927ae.js"
+    "static/js/main.8e306bd1.js"
   ]
 }
