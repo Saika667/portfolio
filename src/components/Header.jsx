@@ -82,7 +82,7 @@ const MobileMenu = styled.div`
   }
 `
 
-function Header({ currentTheme, setTheme }) {
+function Header({ currentTheme, setTheme, workTypeState }) {
   const pathIndex = {
     '/': 0,
     '/folio': 1,

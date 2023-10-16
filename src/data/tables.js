@@ -69,9 +69,9 @@ export const skillsTable = [
 export const experiencesTable = [
     {
         id: 'exp14',
-        job: 'En recherche d\'emploi',
+        job: 'En recherche d\'alternance',
         company: '',
-        contract: 'CDD / CDI',
+        contract: '2 ans',
         date: 'Disponible immédiatemment',
         category: 'dev'
     },
