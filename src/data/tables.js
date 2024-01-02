@@ -8,6 +8,7 @@ import groupomania from '../assets/groupomania.png'
 import portfolio from '../assets/portfolio-1.png'
 import memory from '../assets/memory.png'
 import minesweeper from '../assets/minesweeper.png'
+import quizz from '../assets/quizz.png'
 import { ReactComponent as Redux} from '../assets/redux.svg'
 import {ReactComponent as Html5 } from '../assets/html5.svg'
 import {ReactComponent as Css } from '../assets/css.svg'
@@ -17,6 +18,8 @@ import {ReactComponent as NodeJs } from '../assets/nodejs.svg'
 import {ReactComponent as Database } from '../assets/database.svg'
 import {ReactComponent as VueJs } from '../assets/vuejs.svg'
 import {ReactComponent as React } from '../assets/react.svg'
+import {ReactComponent as PHP} from '../assets/php.svg'
+import {ReactComponent as MySQL} from '../assets/mysql.svg'
 
 export const skillsTable = [
     {
@@ -63,6 +66,16 @@ export const skillsTable = [
         id: 'sk9',
         category: 'autre',
         skill: 'Redux Toolkit',
+    },
+    {
+        id: 'sk10',
+        category: 'backend',
+        skill: 'PHP',
+    },
+    {
+        id: 'sk11',
+        category: 'backend',
+        skill: 'MySQL',
     },
 ]
 
@@ -413,11 +426,41 @@ export const projectsTable = [
         ],
         skills: ['Travailler la logique de React.', 'Apprendre à utiliser et mettre en place l\'outil Redux Toolkit.'],
         openclassroom: false,
-        context: 'Ce projet a été réalisé dans le but de mettre en avant mes compétences et de trouver un premier emploi dans le monde du développement.',
+        context: 'Ce projet a été réalisé dans le but de mettre en avant mes compétences et de trouver une alternance dans le monde du développement.',
         specifications: ['Aucune'],
         images: [],
         cover: minesweeper,
         code: 'https://github.com/Saika667/minesweeper',
         site: 'https://saika667.github.io/minesweeper'
+    },
+    {
+        id: 'pr9',
+        name: 'Quizz',
+        technologies: [
+            {
+                name: 'HTML',
+                logo: <Html5 />,
+            },
+            {
+                name: 'SCSS',
+                logo: <Sass />,
+            },
+            {
+                name: 'PHP',
+                logo: <PHP />,
+            },
+            {
+                name: 'MySQL',
+                logo: <MySQL />,
+            }
+        ],
+        skills: ['Apprendre le PHP.', 'Apprendre le MySQL.', 'Apprendre à manipuler une base de donné SQL.', 'Développé en "Mobile first".', 'Travailler la programmation orientée objet.'],
+        openclassroom: false,
+        context: 'Ce projet a été réalisé dans le but de mettre en avant mes compétences et de trouver une alternance dans le monde du développement.',
+        specifications: ['Aucune'],
+        images: [],
+        cover: quizz,
+        code: 'https://github.com/Saika667/Quizz',
+        site: 'https://saika-quiz.000webhostapp.com/quizz'
     },
 ]
