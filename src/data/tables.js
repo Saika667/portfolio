@@ -454,7 +454,7 @@ export const projectsTable = [
                 logo: <MySQL />,
             }
         ],
-        skills: ['Apprendre le PHP.', 'Apprendre le MySQL.', 'Apprendre à manipuler une base de donné SQL.', 'Développé en "Mobile first".', 'Travailler la programmation orientée objet.'],
+        skills: ['Apprendre le PHP.', 'Apprendre le MySQL.', 'Apprendre à manipuler une base de données SQL.', 'Développé en "Mobile first".', 'Travailler la programmation orientée objet.'],
         openclassroom: false,
         context: 'Ce projet a été réalisé dans le but de mettre en avant mes compétences et de trouver une alternance dans le monde du développement.',
         specifications: ['Aucune'],
