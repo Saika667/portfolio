@@ -72,7 +72,7 @@ function ProjectPage() {
                     </div>
 
                     <div className='project-desc-div skill'>
-                        <h3>Compétences évaluées</h3>
+                        <h3>Compétences {project.openclassroom ? 'évaluées' : ''}</h3>
                         <ul>
                             {project.skills.map((skill, index) => (
                                 <li key={index}>{skill}</li>

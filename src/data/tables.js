@@ -9,6 +9,8 @@ import portfolio from '../assets/portfolio-1.png'
 import memory from '../assets/memory.png'
 import minesweeper from '../assets/minesweeper.png'
 import quizz from '../assets/quizz.png'
+import tipeee from '../assets/tipeee.png'
+import wakfu from '../assets/wakfu.png'
 import { ReactComponent as Redux} from '../assets/redux.svg'
 import {ReactComponent as Html5 } from '../assets/html5.svg'
 import {ReactComponent as Css } from '../assets/css.svg'
@@ -462,5 +464,53 @@ export const projectsTable = [
         cover: quizz,
         code: 'https://github.com/Saika667/Quizz',
         site: 'https://saika-quiz.000webhostapp.com/quizz'
+    },
+    {
+        id: 'pr10',
+        name: 'Tipeee',
+        technologies: [
+            {
+                name: 'NodeJs',
+                logo: <NodeJs />,
+            },
+        ],
+        skills: ['Utilisation de la librairie Google Spread Sheet.', 'Travailler le langage NodeJs.', 'Projet réalisé avec un temps très limité.'],
+        openclassroom: false,
+        context: 'Ce projet a été réalisé pour un live caritatif sur Twitch pour l\'association des vétérans de France. Pour cet événement, les viewers pouvaient faire des dons pas le biais de la plateforme Tipeee.',
+        specifications: ['Ce projet ne possède pas de front', 'Le but était de récupérer le nom des donateurs sur la plateforme Tipeee et de les mettre dans un google sheet. Afin que la personne chargée de gérer l\'overlay puisse afficher le nom des donateurs pendant le live.', 'Trois types de données étaient récupérées, le dernier donateur, un classement heure par heure et un classement global des plus généreux donateurs.'],
+        images: [],
+        cover: tipeee,
+        code: 'hhttps://github.com/Saika667/tipeee-donators',
+        site: ''
+    },
+    {
+        id: 'pr11',
+        name: 'Wakfu',
+        technologies: [
+            {
+                name: 'HTML',
+                logo: <Html5 />,
+            },
+            {
+                name: 'SCSS',
+                logo: <Sass />,
+            },
+            {
+                name: 'React',
+                logo: <React />,
+            },
+            {
+                name: 'Redux Toolkit',
+                logo: <Redux />,
+            }
+        ],
+        skills: ['Travailler la logique de React.', 'Travailler avec l\'outil Redux Toolkit.'],
+        openclassroom: false,
+        context: 'Ce projet a été réalisé dans le but d\'aider les personnes de ma guilde à réaliser les quêtes chasseurs journalières sur le jeu Wakfu.',
+        specifications: ['Aucune'],
+        images: [],
+        cover: wakfu,
+        code: 'https://github.com/Saika667/Wakfu',
+        site: 'https://saika667.github.io/Wakfu/'
     },
 ]

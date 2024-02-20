@@ -60,6 +60,7 @@ function FolioPage() {
                             technologies={project.technologies}
                             skills={project.skills}
                             projectId={project.id}
+                            openclassroom={project.openclassroom}
                         />
                     ))}
                 </div>

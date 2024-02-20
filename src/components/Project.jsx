@@ -1,5 +1,5 @@
 import SeeMore from './buttons/SeeMoreButton'
-import styled from 'styled-components'
+import styled, { useTheme } from 'styled-components'
 import ArrowButton from './buttons/ArrowButton'
 import { useContext, useState } from 'react'
 import { GlobalContext } from '../utils/context/global'
@@ -151,10 +151,10 @@ const ProjectDesc = styled.div`
     }
 `
 
-function Project({image, title, technologies, skills, index, projectId}) {
+function Project({image, title, technologies, skills, index, projectId, openclassroom}) {
     const [isOpenDesc, setOpenDesc] = useState(false)
     const { device } = useContext(GlobalContext)
-    
+    console.log(openclassroom)
     return (
         <ProjectArt key={index}>
             <ImageContainer>
@@ -176,7 +176,12 @@ function Project({image, title, technologies, skills, index, projectId}) {
                         </div>
                     ))}
                 </div> 
-                <p>Compétences évaluées :</p>
+                {openclassroom ? 
+                    <p>Compétences évaluées :</p>
+                    :
+                    <p>Compétences :</p>
+                }
+                
                 <ul>
                     {skills.map((skill, index) => (
                         <li key={index}>{skill}</li>

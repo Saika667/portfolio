@@ -8,6 +8,7 @@
         display: flex;
         justify-content: space-evenly;
         margin: 11px 0;
+        flex-wrap: wrap;
 
         &-elt {
             color: var(--color-primary);
@@ -16,6 +17,7 @@
             padding: 11px 15px;
             cursor: pointer;
             display: flex;
+            margin-bottom: 8px;
 
             &.active {
                 background-color: var(--color-third);
@@ -68,12 +70,7 @@
         align-items: center;
 
         &-filter {
-            flex-wrap: wrap;
             width: 90%;
-            
-            &-elt {
-                margin-bottom: 8px;
-            }
         }
 
     }
